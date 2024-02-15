@@ -1,0 +1,111 @@
+.hoverItem {
+    display: inline-block;
+    transition: all .2s;
+    transform-origin: 50% 50%;
+}
+
+.hoverCard {
+    display: inline-block;
+    transition: all .2s;
+    transform-origin: 50% 50%;
+}
+
+@media (pointer: fine) {
+    .hoverItem:hover {
+        transform: scale(1.1);
+    }
+
+    .hoverCard:hover {
+        transform: scale(1.04);
+    }
+
+    .wrapperDeveloped:hover {
+        cursor: pointer;
+    }
+
+    .nav-item:hover {
+        transform: scale(1.1);
+    }
+
+    .nav-link:hover {
+        color: white;
+        text-shadow: 6px 6px var(--main-second-color);
+    }
+
+    button:hover {
+        color: var(--main-second-color);
+        background-color: var(--main-light-color);
+    }
+
+    #scrollToTopBtn.active:hover {
+        opacity: 1;
+    }
+
+    .hoverItemVideo:hover {
+        transform: scale(1.01);
+    }
+
+    .hoverIcon:hover {
+        transform: scale(1.2);
+    }
+
+    .hoverItemVideo:hover {
+        transform: scale(1.01);
+    }
+
+    .modal-header .close-button:hover {
+        color: var(--main-second-color);
+        transform: scale(1.2);
+    }
+}
+
+@media (hover: none),
+(pointer: coarse),
+(pointer: none) {
+    .hoverItem:active {
+        transform: scale(1.1);
+    }
+
+    .hoverCard:active {
+        transform: scale(1.04);
+    }
+
+    .wrapperDeveloped:active {
+        cursor: pointer;
+    }
+
+    .nav-item:active {
+        transform: scale(1.1);
+    }
+
+    .nav-link:active {
+        color: white;
+        text-shadow: 6px 6px var(--main-second-color);
+    }
+
+    button:active {
+        color: var(--main-second-color);
+        background-color: var(--main-light-color);
+    }
+
+    #scrollToTopBtn.active:active {
+        opacity: 1;
+    }
+
+    .hoverItemVideo:active {
+        transform: scale(1.01);
+    }
+
+    .hoverIcon:active {
+        transform: scale(1.2);
+    }
+
+    .hoverItemVideo:active {
+        transform: scale(1.01);
+    }
+
+    .modal-header .close-button:active {
+        color: var(--main-second-color);
+        transform: scale(1.2);
+    }
+}

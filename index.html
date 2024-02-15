@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- STYLES -->
+    <link href="./css/styles.css" rel="stylesheet" />
+    <link href="./css/hover.css" rel="stylesheet" />
+    <link href="./css/musicStyle.css" rel="stylesheet" />
+    <link href="./css/merchStyle.css" rel="stylesheet" />
+    <link href="./css/contactStyle.css" rel="stylesheet" />
+    <link href="./css/navbarStyles.css" rel="stylesheet" />
+    <link href="./css/footerStyle.css" rel="stylesheet" />
+    <link href="./css/introStyles.css" rel="stylesheet" />
+    <link href="./css/popup.css" rel="stylesheet" />
+    <link href="./css/getMerchModal.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/images/crbrvs_logo.ico">
+
+    <!-- SCRIPTS -->
+    <script defer src="./js/navBarToggler.js"></script>
+    <script defer src="./js/scrollToTop.js"></script>
+    <script defer src="./js/horizScrollToggler.js"></script>
+    <script defer src="./js/horizScrollFunction.js"></script>
+    <script defer src="./js/getMerchModal.js"></script>
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script defer src="./js/sendEmail.js"></script>
+
+    <title>CRBVRS.</title>
+</head>
+
+<body ontouchstart="">
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">&#8593;</button>
+    <div class="pageContainer" id="pageContainer">
+        <div class="navbarWrapper">
+            <nav class="navbar">
+                <a href="#musicSection" class="nav-branding">
+                    <img class="navLogo hoverItem" src="./assets/images/crbrvs_logo.png" alt="Logo">
+                </a>
+                <ul class="nav-menu">
+                    <div class="nav-item">
+                        <a href="#musicSection" class="nav-link">Music</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#merchSection" class="nav-link">Shop</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#contactSection" class="nav-link">Contact</a>
+                    </div>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+        <div id="background-image-header">
+            <div class="heroLabel">
+                <div class="headlineIntroText">
+                    Redefining rap.
+                </div>
+            </div>
+        </div>
+        <div class="scrollContainer">
+            <section id="musicSection">
+                <div class="musicWrapper" id="background-image-music">
+                    <div class="row">
+                        <div class="sectionTitle">
+                            <div class="rectangleBack"></div>
+                            <div class="sectionTitleIntroText">
+                                Music.
+                            </div>
+                            <div class="rectangleFront"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="descriptionColumn">
+                            <div class="musicDescriptiontext">
+                                I'm a young rapper that does not set boundaries when it comes to crafting quality music.
+                                Go check out some sample songs that I've created:
+                            </div>
+                        </div>
+                        <div class="musicPlayerColumn">
+                            <object class="musicPlayerObject"
+                                data="./assets/MusicPlayer/musicPlayerIndex.html"></object>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="descriptionColumn">
+                            <div class="musicDescriptiontext">
+                                My latest content:
+                            </div>
+                        </div>
+                        <div class="musicPlayerColumn">
+                            <div class="youtube-embed-container">
+                                <iframe id="youtube_embed" width="100%" height="100%"
+                                    src="https://www.youtube.com/embed?listType=playlist&list=UUgwEGZvzNM-J6QkOcQ2ysrw"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen width="200" height="200"></iframe>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="musicWrapper" id="background-image-youtube">
+                    <div class="row">
+                        <div class="Column-1">
+                            <div class="musicDescriptiontext">
+                                Also, don't forget to check out my songs on Spotify, Apple Music, Tidal or Youtube
+                                Music:
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="musicLinkCardContainer">
+                            <div class="Column-4 musicIconColumnLeft">
+                                <a href="https://open.spotify.com/artist/5K2zVyaTtGCT7y4EjMcTot">
+                                    <div class="card musicLinkCard hoverItem">
+                                        <img class="musicLogo" src="./assets/images/musicLogos/spotify.png"
+                                            alt="spotify">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="Column-4 musicIconColumnRight">
+                                <a href="https://music.apple.com/za/artist/cerberus/1498001976">
+                                    <div class="card musicLinkCard hoverItem">
+                                        <img class="musicLogo" src="./assets/images/musicLogos/applemusic.png"
+                                            alt="apple">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="Column-4 musicIconColumnLeft">
+                                <a href="https://tidal.com/browse/artist/37539698">
+                                    <div class="card musicLinkCard hoverItem">
+                                        <img class="musicLogo" src="./assets/images/musicLogos/tidal.png" alt="tidal">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="Column-4 musicIconColumnRight">
+                                <a href="https://music.youtube.com/browse/UC1Ll1SubmTbLAiy5ZTWJzIQ">
+                                    <div class="card musicLinkCard hoverItem">
+                                        <img class="musicLogo" src="./assets/images/musicLogos/ytmusic.png"
+                                            alt="ytmusic">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="Column-1">
+                            <div class="card hoverItemVideo">
+                                <a href="https://www.youtube.com/channel/UCgwEGZvzNM-J6QkOcQ2ysrw">
+                                    <div class="teaserVideoContainer">
+                                        <div class="videoOverlay">Check out my YouTube channel for the latest
+                                            music and news!</div>
+                                        <video autoplay loop muted playsinline id="teaserVideo">
+                                            <source src="./assets/videos/CRBRVS_Teaser.mp4">
+                                        </video>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="merchSection">
+                <div class="sectionWrapper" id="background-image-merch">
+                    <div class="row">
+                        <div class="sectionTitle">
+                            <div class="rectangleBack"></div>
+                            <div class="sectionTitleIntroText">
+                                Merch.
+                            </div>
+                            <div class="rectangleFront"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="Column-1">
+                            <div class="musicDescriptiontext">
+                                Wanna wear some spicy shirts? You can have them right now:
+                            </div>
+                        </div>
+                    </div>
+                    <div class="horizontalScrollContainer" id="horizontalScrollContainer">
+                        <div class="hintScrollHoriz" id="hintScrollHoriz">
+                            <div class="icon-scroll"></div>
+                        </div>
+                        <div class="card merchcard hoverCard">
+                            <div class="merchImgContainer">
+                                <img class="merchImg" src="./assets/images/merch/merch-1.png" alt="merch-1">
+                            </div>
+                            <div class="card-footer">
+                                <p>90 RON</p>
+                                <button data-modal-target="#getMerchModal" class="buyButtonStyle">Get it!</button>
+                            </div>
+                        </div>
+                        <div class="card merchcard hoverCard">
+                            <div class="merchImgContainer">
+                                <img class="merchImg" src="./assets/images/merch/merch-2.png" alt="merch-2">
+                            </div>
+                            <div class="card-footer">
+                                <p>90 RON</p>
+                                <button data-modal-target="#getMerchModal" class="buyButtonStyle">Get it!</button>
+                            </div>
+                        </div>
+                        <div class="card merchcard hoverCard">
+                            <div class="merchImgContainer">
+                                <img class="merchImg" src="./assets/images/merch/merch-3.png" alt="merch-3">
+                            </div>
+                            <div class="card-footer">
+                                <p>90 RON</p>
+                                <button data-modal-target="#getMerchModal" class="buyButtonStyle">Get it!</button>
+                            </div>
+                        </div>
+                        <div class="card merchcard hoverCard">
+                            <div class="merchImgContainer">
+                                <img class="merchImg" src="./assets/images/merch/coming_soon.png" alt="coming_soon">
+                            </div>
+                            <div class="card-footer">
+                                <p>?? RON</p>
+                                <button class="buyButtonStyle">In the making...</button>
+                            </div>
+                        </div>
+                        <div class="card merchcard hoverCard">
+                            <div class="merchImgContainer">
+                                <img class="merchImg" src="./assets/images/merch/coming_soon.png" alt="coming_soon">
+                            </div>
+                            <div class="card-footer">
+                                <p>?? RON</p>
+                                <button class="buyButtonStyle">In the making...</button>
+                            </div>
+                        </div>
+                        <div class="card merchcard hoverCard">
+                            <div class="merchImgContainer">
+                                <img class="merchImg" src="./assets/images/merch/coming_soon.png" alt="coming_soon">
+                            </div>
+                            <div class="card-footer">
+                                <p>?? RON</p>
+                                <button class="buyButtonStyle">In the making...</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contactSection">
+                <div class="sectionWrapper" id="background-image-contact">
+                    <div class="row">
+                        <div class="sectionTitle">
+                            <div class="rectangleBack"></div>
+                            <div class="sectionTitleIntroText">
+                                Contact.
+                            </div>
+                            <div class="rectangleFront"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="Column-1">
+                            <div class="musicDescriptiontext">
+                                Wanna get in touch? Don't hesitate!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row contactRow">
+                        <div class="Column-2">
+                            <div class="card contactCard hoverCard">
+                                <div class="contactInfo">
+                                    <div class="contactInfoEntry">
+                                        <p class="cardContactTextTitle">Contact Info:</p>
+                                    </div>
+                                    <div class="contactInfoEntry">
+                                        <i class="bi bi-envelope contactIconsCard me-2"></i><span
+                                            class="card-subtitle mb-2 cardContactText">E-mail:</span><br>
+                                        <a href="mailto:crbrvsraps@gmail.com">
+                                            <p class="cardContactText">crbrvsraps@gmail.com</p>
+                                        </a>
+                                    </div>
+                                    <div class="contactInfoEntry">
+                                        <i class="bi bi-telephone contactIconsCard me-2"></i><span
+                                            class="card-subtitle cardContactText">Phone:</span>
+                                        <a href="tel:+40744210017">
+                                            <p class="cardContactText">+40744210017</p>
+                                        </a>
+                                    </div>
+                                    <div class="contactInfoEntry">
+                                        <i class="bi bi-facebook contactIconsCard me-2"></i><span
+                                            class="card-subtitle cardContactText">Facebook:</span>
+                                        <a href="https://www.facebook.com/CRBRVS/">
+                                            <p class="cardContactText">facebook.com/CRBRVS</p>
+                                        </a>
+                                    </div>
+                                    <div class="contactInfoEntry">
+                                        <i class="bi bi-instagram contactIconsCard me-2"></i><span
+                                            class="card-subtitle cardContactText">Instagram:</span>
+                                        <a href="https://www.instagram.com/_crbrvs/">
+                                            <p class="cardContactText">instagram.com/_crbrvs</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Column-2">
+                            <div class="card contactCard hoverCard">
+                                <form id="contactForm" onsubmit="sendEmail(); reset(); return false">
+                                    <div class="formContainer">
+                                        <div class="formLabelInput">
+                                            <label for="from_name" class="form-label">Name:</label>
+                                            <input class="form-control" id="from_name" type="text"
+                                                placeholder="Your Name" required />
+                                        </div>
+                                        <div class="formLabelInput">
+                                            <label for="from_email" class="form-label">E-mail:</label>
+                                            <input class="form-control" id="from_email" type="email"
+                                                placeholder="Your E-mail Address" required />
+                                        </div>
+                                        <div class="formLabelInput">
+                                            <label for="from_message" class="form-label">Message:</label>
+                                            <textarea class="form-control" id="from_message" type="text"
+                                                placeholder="Your Message" required style="height: 10rem"></textarea>
+                                        </div>
+                                        <div class="sendButtonContainer">
+                                            <button class="sendButtonStyle" type="submit">Send!</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="popupBox" id="popupEmail">
+                                    <h2 id="emailPopupTextHeader"></h2>
+                                    <p id="emailPopupTextParagraph"></p>
+                                    <button type="submit" class="btn okButtonStyle" onclick="closePopup()">OK</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footerContainer">
+            <div class="row footerRow">
+                <div class="outerColumnFooter1">
+                    <div class="innerColumnFooter11">
+                        <span class="hoverItem">CRBRVS</span>
+                    </div>
+                    <div class="innerColumnFooter12">
+                        <span class="hoverItem">
+                            <a href="https://linktr.ee/crbrvs">
+                                LinkTree
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="outerColumnFooter2">
+                    <div class="innerColumnFooter21">
+                        <ul class="contactIcons">
+                            <li>
+                                <a href="https://www.facebook.com/CRBRVS/"><i
+                                        class="bi-facebook footerIcon hoverIcon"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/_crbrvs/"><i
+                                        class="bi-instagram footerIcon hoverIcon"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCgwEGZvzNM-J6QkOcQ2ysrw"><i
+                                        class="bi-youtube footerIcon hoverIcon"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://open.spotify.com/artist/5K2zVyaTtGCT7y4EjMcTot"><i
+                                        class="bi-spotify footerIcon hoverIcon"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="innerColumnFooter22">
+                        <span class="hoverItem">©2023</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row footerRowDevelopedBy">
+                <div class="wrapperDeveloped hoverItem">
+                    <a href="https://dan-frunza.web.app/">
+                        <span class="textLineHeight">Developed & maintained by DanFrunza</span>
+                        <i class="danfrunzaIcon"></i>
+                    </a>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <div class="modal" id="getMerchModal">
+        <div class="modal-header">
+            <div class="title">Want this merch?</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                Choose an option to contact me for getting this shirt:
+            </div>
+            <div class="row">
+                <div class="Column-2">
+                    <a class="fullSpaceHref" href="tel:+40744210017">
+                        <button class="buyButtonStyle">Call me</button>
+                    </a>
+                </div>
+                <div class="Column-2">
+                    <a class="fullSpaceHref" href="mailto:crbrvsraps@gmail.com">
+                        <button class="buyButtonStyle">E-mail me</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay"></div>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyByp45LFfniaEJYhLCPJaeAe7lAzngQz9I",
+            authDomain: "crbrvs-rap.firebaseapp.com",
+            projectId: "crbrvs-rap",
+            storageBucket: "crbrvs-rap.appspot.com",
+            messagingSenderId: "908885512149",
+            appId: "1:908885512149:web:68d70906015b90334fb75c",
+            measurementId: "G-SL1CBKCW86"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+</body>
+
+</html>
