@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crbrvs-rap.web.app/sitemap.xml
