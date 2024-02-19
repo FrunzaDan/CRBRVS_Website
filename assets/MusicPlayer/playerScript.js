@@ -12,19 +12,40 @@ const wrapper = document.querySelector(".wrapper"),
   moreMusicBtn = wrapper.querySelector("#more-music"),
   closemoreMusic = musicList.querySelector("#close");
 
-let musicIndex = Math.floor((Math.random() * allMusic.length) + 1);
+const musicListJson = '../../music-list.json';
+let allMusic = null;
+let fullList = false;
+
+let musicIndex = null;
 isMusicPaused = true;
 
 window.addEventListener("load", () => {
-  loadMusic(musicIndex);
-  playingSong();
+  loadMusicPlayer();
 });
+
+async function loadMusicPlayer() {
+  allMusic = await fetchData();
+  if (allMusic) {
+    musicIndex = Math.floor((Math.random() * allMusic.length) + 1);
+    populateMusicList(allMusic);
+    if (fullList == true) {
+      loadMusic(musicIndex);
+      playingSong();
+    }
+  }
+}
+
+async function fetchData() {
+  const response = await fetch(musicListJson);
+  const data = await response.json();
+  return data;
+}
 
 function loadMusic(indexNumb) {
   musicName.innerText = allMusic[indexNumb - 1].name;
   musicArtist.innerText = allMusic[indexNumb - 1].artist;
-  musicImg.src = `playerImages/${allMusic[indexNumb - 1].src}.jpg`;
-  mainAudio.src = `playerSongs/${allMusic[indexNumb - 1].src}.mp3`;
+  musicImg.src = `./playerImages/${allMusic[indexNumb - 1].src}.jpg`;
+  mainAudio.src = `./playerSongs/${allMusic[indexNumb - 1].src}.mp3`;
 }
 
 //play music function
@@ -174,32 +195,36 @@ closemoreMusic.addEventListener("click", () => {
 });
 
 const ulTag = wrapper.querySelector("ul");
-// let create li tags according to array length for list
-for (let i = 0; i < allMusic.length; i++) {
-  //let's pass the song name, artist from the array
-  let liTag = `<li li-index="${i + 1}">
+function populateMusicList(allMusic) {
+  // let create li tags according to array length for list
+  for (let i = 0; i < allMusic.length; i++) {
+    //let's pass the song name, artist from the array
+    let liTag = `<li li-index="${i + 1}">
                 <div class="row">
                   <span>${allMusic[i].name}</span>
                   <p>${allMusic[i].artist}</p>
                 </div>
-                <span id="${allMusic[i].src}" class="audio-duration">3:40</span>
-                <audio class="${allMusic[i].src}" src="songs/${allMusic[i].src}.mp3"></audio>
+                <span id="${allMusic[i].src}" class="audio-duration">0:30</span>
+                <audio class="${allMusic[i].src}" src="./playerSongs/${allMusic[i].src}.mp3"></audio>
               </li>`;
-  ulTag.insertAdjacentHTML("beforeend", liTag); //inserting the li inside ul tag
+    ulTag.insertAdjacentHTML("beforeend", liTag); //inserting the li inside ul tag
 
-  let liAudioDuartionTag = ulTag.querySelector(`#${allMusic[i].src}`);
-  let liAudioTag = ulTag.querySelector(`.${allMusic[i].src}`);
-  liAudioTag.addEventListener("loadeddata", () => {
-    let duration = liAudioTag.duration;
-    let totalMin = Math.floor(duration / 60);
-    let totalSec = Math.floor(duration % 60);
-    if (totalSec < 10) { //if sec is less than 10 then add 0 before it
-      totalSec = `0${totalSec}`;
-    };
-    liAudioDuartionTag.innerText = `${totalMin}:${totalSec}`; //passing total duation of song
-    liAudioDuartionTag.setAttribute("t-duration", `${totalMin}:${totalSec}`); //adding t-duration attribute with total duration value
-  });
+    let liAudioDuartionTag = ulTag.querySelector(`#${allMusic[i].src}`);
+    let liAudioTag = ulTag.querySelector(`.${allMusic[i].src}`);
+    liAudioTag.addEventListener("loadeddata", () => {
+      let duration = liAudioTag.duration;
+      let totalMin = Math.floor(duration / 60);
+      let totalSec = Math.floor(duration % 60);
+      if (totalSec < 10) { //if sec is less than 10 then add 0 before it
+        totalSec = `0${totalSec}`;
+      };
+      liAudioDuartionTag.innerText = `${totalMin}:${totalSec}`; //passing total duation of song
+      liAudioDuartionTag.setAttribute("t-duration", `${totalMin}:${totalSec}`); //adding t-duration attribute with total duration value
+    });
+  }
+  return fullList = true;
 }
+
 
 //play particular song from the list onclick of li tag
 function playingSong() {
