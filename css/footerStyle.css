@@ -14,7 +14,7 @@
     flex-direction: column;
     color: var(--main-second-color);
     text-shadow: 2px 2px var(--main-first-color);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     min-height: 25%;
 }
 
@@ -175,6 +175,30 @@
     }
 }
 
+.wrapperDeveloped {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.danfrunzaIcon {
+    background-image: url(../assets/images/danfrunza.ico);
+    height: 1.2rem;
+    width: 1.2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    margin-left: .25em;
+    filter: invert(47%) sepia(53%) saturate(6454%) hue-rotate(319deg) brightness(100%) contrast(105%);
+}
+
 /* VERY SMALL SCREENS: */
 @media only screen and (max-width: 576px) {
     .footerContainer {
@@ -233,28 +257,14 @@
         flex-direction: row;
         justify-content: center;
     }
-}
 
-.wrapperDeveloped {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 10px;
-    padding-top: 10px;
-    margin-bottom: 10px;
-    line-height: 1;
-}
+    .wrapperDeveloped {
+        font-size: 1.2rem;
 
-.danfrunzaIcon {
-    background-image: url(../assets/images/danfrunza.ico);
-    height: 1em;
-    width: 1em;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
-    margin-left: .25em;
-    filter: invert(47%) sepia(53%) saturate(6454%) hue-rotate(319deg) brightness(100%) contrast(105%);
+    }
+
+    .danfrunzaIcon {
+        height: 1rem;
+        width: 1rem;
+    }
 }
