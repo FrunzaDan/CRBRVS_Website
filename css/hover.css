@@ -1,21 +1,21 @@
-.hoverItem {
+.hover-item {
     display: inline-block;
     transition: all .2s;
     transform-origin: 50% 50%;
 }
 
-.hoverCard {
+.hover-card {
     display: inline-block;
     transition: all .2s;
     transform-origin: 50% 50%;
 }
 
 @media (pointer: fine) {
-    .hoverItem:hover {
+    .hover-item:hover {
         transform: scale(1.1);
     }
 
-    .hoverCard:hover {
+    .hover-card:hover {
         transform: scale(1.04);
     }
 
@@ -62,11 +62,11 @@
 @media (hover: none),
 (pointer: coarse),
 (pointer: none) {
-    .hoverItem:active {
+    .hover-item:active {
         transform: scale(1.1);
     }
 
-    .hoverCard:active {
+    .hover-card:active {
         transform: scale(1.04);
     }
 

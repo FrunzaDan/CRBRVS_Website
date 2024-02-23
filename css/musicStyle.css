@@ -10,7 +10,7 @@
     padding-bottom: 2px;
 }
 
-.musicDescriptiontext {
+.music-description-text {
     display: flex;
     text-justify: inter-word;
     margin: 15px;
@@ -22,7 +22,7 @@
     text-wrap: balance;
 }
 
-.descriptionColumn {
+.description-column {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +31,7 @@
     margin: 5px;
 }
 
-.musicPlayerColumn {
+.music-player-column {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,12 +77,12 @@
     background-size: cover;
 }
 
-.teaserVideoContainer {
+.teaser-video-container {
     position: relative;
     border-radius: 12px;
 }
 
-.teaserVideoContainer video {
+.teaser-video-container video {
     width: 100%;
     display: block;
     margin-left: auto;
@@ -90,7 +90,7 @@
     border-radius: 12px;
 }
 
-.teaserVideoContainer:before {
+.teaser-video-container:before {
     content: '';
     position: absolute;
     background: linear-gradient(-45deg, rgba(255, 55, 120, 0.6), rgba(1, 92, 87, 0.6));
@@ -101,7 +101,7 @@
     left: 0;
 }
 
-.videoOverlay {
+.video-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -116,7 +116,7 @@
     font-size: 5rem;
 }
 
-.musicLinkCard {
+.music-link-card {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,7 +136,7 @@
     max-width: 140px;
 }
 
-.musicLinkCardContainer {
+.music-link-card-container {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -146,26 +146,26 @@
 }
 
 @media(min-width:768px) and (max-width:880px) {
-    .musicDescriptiontext {
+    .music-description-text {
         margin: 10px;
         padding: 10px;
         font-size: 2.8125rem;
     }
 
-    .descriptionColumn {
+    .description-column {
         width: 50%;
     }
 
-    .musicPlayerColumn {
+    .music-player-column {
         width: 50%;
     }
 
-    .videoOverlay {
+    .video-overlay {
         font-size: 3.75rem;
         text-wrap: balance;
     }
 
-    .musicLinkCard {
+    .music-link-card {
         max-width: 160px;
     }
 
@@ -183,17 +183,17 @@
         max-width: 100px;
     }
 
-    .musicDescriptiontext {
+    .music-description-text {
         margin: 10px;
         padding: 10px;
         font-size: 2.5rem;
     }
 
-    .descriptionColumn {
+    .description-column {
         min-width: 100%;
     }
 
-    .musicPlayerColumn {
+    .music-player-column {
         min-width: 100%;
     }
 
@@ -206,11 +206,11 @@
         background-size: cover
     }
 
-    .musicLinkCard {
+    .music-link-card {
         max-width: 140px;
     }
 
-    .videoOverlay {
+    .video-overlay {
         font-size: 2.5rem;
     }
 }
@@ -222,32 +222,32 @@
         max-width: 80px;
     }
 
-    .musicIconColumnRight {
+    .music-icon-column-right {
         justify-content: right;
     }
 
-    .musicIconColumnLeft {
+    .music-icon-column-left {
         justify-content: left;
     }
 
-    .musicLinkCardContainer {
+    .music-link-card-container {
         flex-direction: column;
         width: 100%;
         padding-top: 5px;
         padding-bottom: 5px;
     }
 
-    .musicDescriptiontext {
+    .music-description-text {
         margin: 10px;
         padding: 10px;
         font-size: 2.1875rem;
     }
 
-    .descriptionColumn {
+    .description-column {
         min-width: 100%;
     }
 
-    .musicPlayerColumn {
+    .music-player-column {
         min-width: 100%;
     }
 
@@ -260,11 +260,11 @@
         background-size: cover
     }
 
-    .musicLinkCard {
+    .music-link-card {
         max-width: 160px;
     }
 
-    .videoOverlay {
+    .video-overlay {
         font-size: 1.25rem;
     }
 }

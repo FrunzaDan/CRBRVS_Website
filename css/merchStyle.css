@@ -16,14 +16,14 @@
     width: 100%;
 }
 
-.merchImg {
+.merch-img {
     overflow: auto;
     padding-top: 5px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.merchcard {
+.merch-card {
     display: flex;
     max-width: 300px;
 }
@@ -105,14 +105,14 @@
 }
 
 @media(min-width:576px) {
-    .merchcard {
+    .merch-card {
         margin-left: 30px;
         margin-right: 30px;
     }
 }
 
 @media(max-width:576px) {
-    .merchcard {
+    .merch-card {
         margin-left: 6px;
         margin-right: 6px;
     }

@@ -174,7 +174,7 @@ input:focus {
     color: var(--main-first-color);
 }
 
-.sectionTitle {
+.section-title {
     display: flex;
     position: relative;
     justify-content: center;
@@ -185,7 +185,7 @@ input:focus {
     margin-bottom: 5%;
 }
 
-.rectangleBack {
+.rectangle-back {
     position: absolute;
     margin-top: 6px;
     width: 100px;
@@ -197,7 +197,7 @@ input:focus {
     background-color: transparent;
 }
 
-.rectangleFront {
+.rectangle-front {
     position: absolute;
     margin-top: 6px;
     width: 100px;
@@ -210,7 +210,7 @@ input:focus {
     z-index: 99;
 }
 
-.sectionWrapper {
+.section-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;

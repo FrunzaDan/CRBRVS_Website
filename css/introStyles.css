@@ -37,7 +37,7 @@
     text-align: center;
 }
 
-.sectionTitleIntroText {
+.section-title-intro-text {
     font-family: var(--Bold-font);
     color: hsl(230, 100%, 95%);
     display: flex;
@@ -131,7 +131,7 @@
 }
 
 @media(max-width:576px) {
-    .sectionTitleIntroText {
+    .section-title-intro-text {
         font-size: 5.6rem;
     }
 }
