@@ -22,7 +22,7 @@
     width: 100%;
 }
 
-.formLabelInput {
+.form-label-input {
     display: flex;
     flex-direction: column;
     padding: 4px;
@@ -30,7 +30,7 @@
     justify-content: space-between;
 }
 
-.sendButtonContainer {
+.send-button-container {
     display: flex;
     flex-direction: column;
     padding-left: 4px;
@@ -42,13 +42,13 @@
     align-items: center;
 }
 
-.sendButtonStyle {
+.send-button-style {
     width: 100%;
     min-height: 50px;
     font-size: 1.25rem;
 }
 
-.okButtonStyle {
+.ok-sent-button-style {
     margin-top: 20px;
     width: 100%;
     min-height: 30px;
@@ -72,14 +72,14 @@
     font-size: 1.25rem;
 }
 
-.contactCard {
+.contact-card {
     display: flex;
     width: 100%;
     -webkit-min-height: 400px;
     min-height: 400px;
 }
 
-.contactInfo {
+.contact-info {
     display: flex;
     flex-direction: column;
     margin: 2px;
@@ -90,7 +90,7 @@
 
 }
 
-.contactInfoEntry {
+.contact-info-entry {
     display: flex;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -99,22 +99,22 @@
     font-size: 30px;
 }
 
-.cardContactText {
+.contact-card-text {
     padding: 5px;
 }
 
-.cardContactTextTitle {
+.contact-card-text-title {
     padding: 5px;
     font-size: 2rem !important;
     margin-bottom: 6px;
 }
 
-.contactIconsCard {
+.contact-card-icons {
     padding: 5px;
 }
 
 @media(min-width:768px) and (max-width:1200px) {
-    .contactInfoEntry {
+    .contact-info-entry {
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 2px;
@@ -124,7 +124,7 @@
 }
 
 @media(min-width:576px) and (max-width:768px) {
-    .contactInfoEntry {
+    .contact-info-entry {
         padding-top: 6px;
         padding-bottom: 6px;
         padding-left: 2px;
@@ -134,18 +134,18 @@
 }
 
 @media(max-width:1080px) {
-    .contactInfoEntry {
+    .contact-info-entry {
         display: block;
     }
 }
 
 @media(max-width:576px) {
-    .contactCard {
+    .contact-card {
         min-width: 50px;
         max-width: 400px;
     }
 
-    .contactInfoEntry {
+    .contact-info-entry {
         padding-top: 6px;
         padding-bottom: 6px;
         padding-left: 2px;

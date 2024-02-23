@@ -422,7 +422,7 @@ input:focus {
     transform-origin: 50% 50%;
 }
 
-.hoverIcon {
+.hover-icon {
     display: inline-block;
     transition: all .2s;
     transform-origin: 50% 50%;

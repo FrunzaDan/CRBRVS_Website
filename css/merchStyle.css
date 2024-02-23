@@ -9,7 +9,7 @@
     background-size: cover;
 }
 
-.merchImgContainer {
+.merch-img-container {
     display: flex;
     justify-content: center;
     height: 75%;
@@ -39,7 +39,7 @@
     align-items: center;
 }
 
-.buyButtonStyle {
+.buy-button-style {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 6px;

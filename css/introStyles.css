@@ -1,4 +1,4 @@
-.heroLabel {
+.hero-label {
     display: flex;
     position: absolute;
     height: 40em;
@@ -21,7 +21,7 @@
     z-index: 2;
 }
 
-.headlineIntroText {
+.headline-intro-text {
     color: hsl(230, 100%, 95%);
     display: flex;
     position: absolute;
@@ -71,13 +71,13 @@
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
-    .headlineIntroText {
+    .headline-intro-text {
         font-size: 5.2rem;
     }
 }
 
 @media only screen and (max-width: 576px) {
-    .headlineIntroText {
+    .headline-intro-text {
         font-size: 4rem;
     }
 }

@@ -1,4 +1,4 @@
-.footerContainer {
+.footer-container {
     background-image: linear-gradient(-45deg, rgba(226, 100, 140, 0.6), rgba(1, 92, 87, 0.4)), url(../assets/images/crbrvs6.jpg);
     -webkit-background-position: 50% 20%;
     -moz-background-position: 50% 20%;
@@ -18,12 +18,12 @@
     min-height: 25%;
 }
 
-.contactIcons {
+.contact-icons {
     display: flex;
     flex-direction: row;
 }
 
-.footerIcon {
+.footer-icon {
     color: var(--main-second-color);
     margin-left: 5px;
     margin-right: 5px;
@@ -31,7 +31,7 @@
     text-decoration-color: none;
 }
 
-.footerRow {
+.footer-row {
     justify-content: space-between;
 }
 
@@ -201,7 +201,7 @@
 
 /* VERY SMALL SCREENS: */
 @media only screen and (max-width: 576px) {
-    .footerContainer {
+    .footer-container {
         -webkit-background-position: top;
         -moz-background-position: top;
         background-position: top;
@@ -252,7 +252,7 @@
         justify-content: center;
     }
 
-    .contactIcons {
+    .contact-icons {
         display: flex;
         flex-direction: row;
         justify-content: center;

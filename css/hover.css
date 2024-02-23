@@ -45,7 +45,7 @@
         transform: scale(1.01);
     }
 
-    .hoverIcon:hover {
+    .hover-icon:hover {
         transform: scale(1.2);
     }
 
@@ -96,7 +96,7 @@
         transform: scale(1.01);
     }
 
-    .hoverIcon:active {
+    .hover-icon:active {
         transform: scale(1.2);
     }
 

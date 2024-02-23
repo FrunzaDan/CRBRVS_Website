@@ -1,4 +1,4 @@
-.musicPlayerObject {
+.music-player-object {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,7 +130,7 @@
     align-items: center;
 }
 
-.musicLogo {
+.music-logo {
     overflow: auto;
     min-width: 80px;
     max-width: 140px;
@@ -169,7 +169,7 @@
         max-width: 160px;
     }
 
-    .musicLogo {
+    .music-logo {
         min-width: 60px;
         max-width: 90px;
     }
@@ -178,7 +178,7 @@
 
 @media(min-width:576px) and (max-width:768px) {
 
-    .musicLogo {
+    .music-logo {
         min-width: 60px;
         max-width: 100px;
     }
@@ -217,7 +217,7 @@
 
 @media(max-width:576px) {
 
-    .musicLogo {
+    .music-logo {
         min-width: 40px;
         max-width: 80px;
     }

@@ -25,10 +25,10 @@
     transform: translate(-50%, -50%) scale(1);
 }
 
-#emailPopupTextHeader {
+#email-popup-text-header {
     padding: 1rem;
 }
 
-#emailPopupTextParagraph {
+#email-popup-text-paragraph {
     padding: 1rem;
 }
