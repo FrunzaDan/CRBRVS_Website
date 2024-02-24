@@ -22,7 +22,7 @@
 }
 
 .headline-intro-text {
-    color: hsl(230, 100%, 95%);
+    color: var(--main-light-color);
     display: flex;
     position: absolute;
     top: 75%;
@@ -32,14 +32,14 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     margin: auto;
-    font-size: 5.8rem;
+    font-size: 6rem;
     animation: lights 3s 1ms linear infinite;
     text-align: center;
 }
 
 .section-title-intro-text {
     font-family: var(--Bold-font);
-    color: hsl(230, 100%, 95%);
+    color: var(--main-light-color);
     display: flex;
     position: absolute;
     top: 45%;

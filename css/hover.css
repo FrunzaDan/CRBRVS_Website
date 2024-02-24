@@ -37,7 +37,7 @@
         background-color: var(--main-light-color);
     }
 
-    #scrollToTopBtn.active:hover {
+    #scroll-to-top-button.active:hover {
         opacity: 1;
     }
 
@@ -88,7 +88,7 @@
         background-color: var(--main-light-color);
     }
 
-    #scrollToTopBtn.active:active {
+    #scroll-to-top-button.active:active {
         opacity: 1;
     }
 

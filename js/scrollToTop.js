@@ -1,18 +1,18 @@
-const scroller = document.querySelector("#pageContainer");
-const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+const scroller = document.querySelector("#page-container");
+const scrollToTopButton = document.getElementById("scroll-to-top-button");
 
 scroller.addEventListener("scroll", (event) => {
     if (scroller.scrollTop > 600) {
-        scrollToTopBtn.classList.add('active');
+        scrollToTopButton.classList.add('active');
     } else {
-        scrollToTopBtn.classList.remove('active');
+        scrollToTopButton.classList.remove('active');
     }
 });
 
 function topFunction() {
     console.log("Top Scroll Triggered");
 
-    var myDiv = document.getElementById("pageContainer");
+    var myDiv = document.getElementById("page-container");
     myDiv.scrollTop = 0;
 }
 

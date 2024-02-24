@@ -1,5 +1,5 @@
 const horizontalScrollContainer = document.getElementById("horizontalScrollContainer");
-const hintScrollHoriz = document.getElementById("hintScrollHoriz");
+const hintScrollHoriz = document.getElementById("hint-scroll-horiz");
 
 horizontalScrollContainer.addEventListener("scroll", () => {
     if (horizontalScrollContainer.scrollLeft > 100) {

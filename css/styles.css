@@ -357,7 +357,7 @@ input:focus {
     }
 }
 
-#scrollToTopBtn {
+#scroll-to-top-button {
     font-family: var(--Bold-font);
     display: block;
     position: fixed;
@@ -384,19 +384,19 @@ input:focus {
     text-align: center;
 }
 
-#scrollToTopBtn.active {
+#scroll-to-top-button.active {
     bottom: 16px;
     right: 26px;
     pointer-events: auto;
     opacity: 0.8;
 }
 
-#scrollToTopBtn:active {
+#scroll-to-top-button:active {
     box-shadow: 0 6px var(--main-second-color);
     transform: translateY(4px);
 }
 
-.pageContainer {
+.page-container {
     margin: 0px;
     padding: 0px;
     height: 100dvh;
@@ -411,7 +411,7 @@ input:focus {
     position: relative;
 }
 
-.pageContainer.noScroll {
+.page-container.noScroll {
     overflow-x: hidden;
     overflow-y: hidden;
 }
