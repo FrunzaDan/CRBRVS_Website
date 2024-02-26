@@ -9,29 +9,31 @@
         content="Personal Website of the rapper Cerga Andrei, named CRBRVS, based in Romania. His music, merch and contacts are highlighted.">
 
     <!-- STYLES -->
-    <link href="./css/styles.css" rel="stylesheet" />
-    <link href="./css/hover.css" rel="stylesheet" />
-    <link href="./css/musicStyle.css" rel="stylesheet" />
-    <link href="./css/merchStyle.css" rel="stylesheet" />
-    <link href="./css/contactStyle.css" rel="stylesheet" />
-    <link href="./css/navbarStyles.css" rel="stylesheet" />
-    <link href="./css/footerStyle.css" rel="stylesheet" />
-    <link href="./css/introStyles.css" rel="stylesheet" />
-    <link href="./css/popup.css" rel="stylesheet" />
-    <link href="./css/getMerchModal.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/assets/images/crbrvs_logo.ico">
+    <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="./css/hover.css" rel="stylesheet" type="text/css" />
+    <link href="./css/musicStyle.css" rel="stylesheet" type="text/css" />
+    <link href="./css/merchStyle.css" rel="stylesheet" type="text/css" />
+    <link href="./css/contactStyle.css" rel="stylesheet" type="text/css" />
+    <link href="./css/navbarStyles.css" rel="stylesheet" type="text/css" />
+    <link href="./css/footerStyle.css" rel="stylesheet" type="text/css" />
+    <link href="./css/introStyles.css" rel="stylesheet" type="text/css" />
+    <link href="./css/popupEmail.css" rel="stylesheet" type="text/css" />
+    <link href="./css/getMerchModal.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet"
+        type="text/css">
+    <link rel="icon" type="image/png" href="/assets/images/favicon.ico">
 
     <!-- SCRIPTS -->
-    <script defer src="./js/navBarToggler.js"></script>
-    <script defer src="./js/scrollToTop.js"></script>
-    <script defer src="./js/horizScrollToggler.js"></script>
-    <script defer src="./js/horizScrollFunction.js"></script>
-    <script defer src="./js/getMerchModal.js"></script>
+    <script defer type="text/javascript" src="./js/navBarToggler.js"></script>
+    <script defer type="text/javascript" src="./js/scrollToTop.js"></script>
+    <script defer type="text/javascript" src="./js/horizScrollToggler.js"></script>
+    <script defer type="text/javascript" src="./js/horizScrollFunction.js"></script>
+    <script defer type="text/javascript" src="./js/getMerchModal.js"></script>
 
     <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script defer src="./js/sendEmail.js"></script>
+    <script async type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script async type="text/javascript" src="./js/sendEmail.js"></script>
 
     <title>CRBVRS.</title>
 </head>
@@ -280,30 +282,30 @@
                                     <div class="contact-info-entry">
                                         <i class="bi bi-envelope contact-card-icons me-2"></i><span
                                             class="card-subtitle mb-2 contact-card-text">E-mail:</span><br>
-                                        <a href="mailto:crbrvsraps@gmail.com">
-                                            <p class="contact-card-text">crbrvsraps@gmail.com</p>
-                                        </a>
+                                        <p class="contact-card-text">
+                                            <a href="mailto:crbrvsraps@gmail.com">crbrvsraps@gmail.com</a>
+                                        </p>
                                     </div>
                                     <div class="contact-info-entry">
                                         <i class="bi bi-telephone contact-card-icons me-2"></i><span
                                             class="card-subtitle contact-card-text">Phone:</span>
-                                        <a href="tel:+40744210017">
-                                            <p class="contact-card-text">+40744210017</p>
-                                        </a>
+                                        <p class="contact-card-text">
+                                            <a href="tel:+40744210017">+40744210017</a>
+                                        </p>
                                     </div>
                                     <div class="contact-info-entry">
                                         <i class="bi bi-facebook contact-card-icons me-2"></i><span
                                             class="card-subtitle contact-card-text">Facebook:</span>
-                                        <a href="https://www.facebook.com/CRBRVS/">
-                                            <p class="contact-card-text">facebook.com/CRBRVS</p>
-                                        </a>
+                                        <p class="contact-card-text">
+                                            <a href="https://www.facebook.com/CRBRVS/">facebook.com/CRBRVS</a>
+                                        </p>
                                     </div>
                                     <div class="contact-info-entry">
                                         <i class="bi bi-instagram contact-card-icons me-2"></i><span
                                             class="card-subtitle contact-card-text">Instagram:</span>
-                                        <a href="https://www.instagram.com/_crbrvs/">
-                                            <p class="contact-card-text">instagram.com/_crbrvs</p>
-                                        </a>
+                                        <p class="contact-card-text">
+                                            <a href="https://www.instagram.com/_crbrvs/">instagram.com/_crbrvs</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -422,7 +424,7 @@
     </div>
     <div id="overlay"></div>
 
-    <script type="module">
+    <script async type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
