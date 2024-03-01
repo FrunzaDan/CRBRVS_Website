@@ -132,8 +132,8 @@
 
 .music-logo {
     overflow: auto;
-    min-width: 80px;
-    max-width: 140px;
+    height: auto;
+    width: 140px;
 }
 
 .music-link-card-container {
@@ -170,8 +170,7 @@
     }
 
     .music-logo {
-        min-width: 60px;
-        max-width: 90px;
+        width: 90px;
     }
 }
 
@@ -179,8 +178,7 @@
 @media(min-width:576px) and (max-width:768px) {
 
     .music-logo {
-        min-width: 60px;
-        max-width: 100px;
+        width: 80px;
     }
 
     .music-description-text {
@@ -218,8 +216,7 @@
 @media(max-width:576px) {
 
     .music-logo {
-        min-width: 40px;
-        max-width: 80px;
+        width: 60px;
     }
 
     .music-icon-column-right {
