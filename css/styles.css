@@ -159,10 +159,8 @@ input:focus {
 }
 
 .card-footer {
-    padding-top: 6px;
-    padding-bottom: 2px;
-    padding-left: 8px;
-    padding-right: 8px;
+    text-align: center;
+    padding: 0.5rem;
     font-size: 2rem;
     text-shadow: -1px 0 var(--main-second-color), 0 1px var(--main-second-color),
         1px 0 var(--main-second-color), 0 -1px var(--main-second-color);
@@ -277,7 +275,7 @@ input:focus {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100%;
+    height: 32rem;
     overflow-x: scroll;
     scrollbar-width: none;
 }

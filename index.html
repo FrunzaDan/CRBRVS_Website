@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
         content="Personal Website of the rapper Cerga Andrei, named CRBRVS, based in Romania. His music, merch and contacts are highlighted.">
+    <meta name="theme-color" content="#058681" />
 
     <!-- STYLES -->
     <link href="./css/styles.css" rel="stylesheet" type="text/css" />
@@ -19,8 +20,8 @@
     <link href="./css/introStyles.css" rel="stylesheet" type="text/css" />
     <link href="./css/popupEmail.css" rel="stylesheet" type="text/css" />
     <link href="./css/getMerchModal.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet"
-        type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"
+        type="text/css" rel="preload" as="style">
     <link rel="icon" type="image/png" href="/assets/images/favicon.ico">
 
     <!-- SCRIPTS -->
@@ -47,15 +48,15 @@
                     <img class="navLogo hover-item" src="./assets/images/crbrvs_logo.png" alt="Logo">
                 </a>
                 <ul class="nav-menu">
-                    <div class="nav-item">
+                    <li class="nav-item">
                         <a href="#music-section" class="nav-link">Music</a>
-                    </div>
-                    <div class="nav-item">
+                    </li>
+                    <li class="nav-item">
                         <a href="#merch-section" class="nav-link">Shop</a>
-                    </div>
-                    <div class="nav-item">
+                    </li>
+                    <li class="nav-item">
                         <a href="#contact-section" class="nav-link">Contact</a>
-                    </div>
+                    </li>
                 </ul>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -92,7 +93,7 @@
                         </div>
                         <div class="music-player-column">
                             <object class="music-player-object" data="./assets/MusicPlayer/musicPlayerIndex.html"
-                                name="music-player"></object>
+                                name="music-player" aria-labelledby="MusicPlayer">Music Player</object>
                         </div>
                     </div>
                     <div class="row">
@@ -365,19 +366,19 @@
                     <div class="innerColumnFooter21">
                         <ul class="contact-icons">
                             <li>
-                                <a href="https://www.facebook.com/CRBRVS/"><i
+                                <a href="https://www.facebook.com/CRBRVS/" aria-label="Facebook"><i
                                         class="bi-facebook footer-icon hover-icon"></i></a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/_crbrvs/"><i
+                                <a href="https://www.instagram.com/_crbrvs/" aria-label="Instagram"><i
                                         class="bi-instagram footer-icon hover-icon"></i></a>
                             </li>
                             <li>
-                                <a href="https://www.youtube.com/channel/UCgwEGZvzNM-J6QkOcQ2ysrw"><i
-                                        class="bi-youtube footer-icon hover-icon"></i></a>
+                                <a href="https://www.youtube.com/channel/UCgwEGZvzNM-J6QkOcQ2ysrw"
+                                    aria-label="Youtube"><i class="bi-youtube footer-icon hover-icon"></i></a>
                             </li>
                             <li>
-                                <a href="https://open.spotify.com/artist/5K2zVyaTtGCT7y4EjMcTot"><i
+                                <a href="https://open.spotify.com/artist/5K2zVyaTtGCT7y4EjMcTot" aria-label="Spotify"><i
                                         class="bi-spotify footer-icon hover-icon"></i></a>
                             </li>
                         </ul>

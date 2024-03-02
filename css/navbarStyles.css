@@ -29,14 +29,14 @@
 .nav-branding {
     color: var(--main-second-color);
     text-shadow: 6px 6px var(--main-first-color);
-    font-size: 3.75rem;
+    font-size: 4rem;
 }
 
 .nav-link {
     font-family: var(--Bold-font);
     color: var(--main-second-color);
     text-shadow: 6px 6px var(--main-first-color);
-    font-size: 3.125rem;
+    font-size: 4rem;
     transition: all 0.6s ease;
 }
 
@@ -94,7 +94,23 @@
     display: inline-block;
 }
 
-@media(max-width:768px) {
+@media(min-width:768px) and (max-width:1100px) {
+    .nav-link {
+        font-size: 3rem;
+    }
+}
+
+@media(min-width:576px) and (max-width:768px) {
+    .nav-link {
+        font-size: 2rem;
+    }
+
+    .nav-branding {
+        font-size: 3rem;
+    }
+}
+
+@media(max-width:576px) {
     .hamburger {
         display: block;
     }
@@ -135,5 +151,9 @@
         padding-top: 10px;
         padding-bottom: 10px;
         width: 100px;
+    }
+
+    .nav-branding {
+        font-size: 3rem;
     }
 }
