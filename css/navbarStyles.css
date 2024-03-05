@@ -108,6 +108,10 @@
     .nav-branding {
         font-size: 3rem;
     }
+
+    .navLogo {
+        width: 120px;
+    }
 }
 
 @media(max-width:576px) {
@@ -145,11 +149,6 @@
     }
 
     .navLogo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
         width: 100px;
     }
 

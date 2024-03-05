@@ -21,6 +21,9 @@
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
+    padding: 1rem;
+    max-width: 18rem;
+    filter: drop-shadow(4px 4px var(--main-second-color)) drop-shadow(4px 4px var(--main-first-color)) drop-shadow(4px 4px var(--main-second-color));
 }
 
 .merch-card {
