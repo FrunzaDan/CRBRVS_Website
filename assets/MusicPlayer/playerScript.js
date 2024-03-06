@@ -44,7 +44,7 @@ async function fetchData() {
 function loadMusic(indexNumb) {
   musicName.innerText = allMusic[indexNumb - 1].name;
   musicArtist.innerText = allMusic[indexNumb - 1].artist;
-  musicImg.src = `./playerImages/${allMusic[indexNumb - 1].src}.jpg`;
+  musicImg.src = `./playerImages/${allMusic[indexNumb - 1].src}.webp`;
   mainAudio.src = `./playerSongs/${allMusic[indexNumb - 1].src}.mp3`;
 }
 
