@@ -11,6 +11,7 @@
 
     <!-- STYLES -->
     <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="./css/loader.css" rel="stylesheet" type="text/css" />
     <link href="./css/hover.css" rel="stylesheet" type="text/css" />
     <link href="./css/musicStyle.css" rel="stylesheet" type="text/css" />
     <link href="./css/merchStyle.css" rel="stylesheet" type="text/css" />
@@ -26,6 +27,7 @@
 
     <!-- SCRIPTS -->
     <script type="text/javascript" src="./js/redirect.js"></script>
+    <script type="text/javascript" src="./js/windowLoaded.js"></script>
     <script defer type="text/javascript" src="./js/navBarToggler.js"></script>
     <script defer type="text/javascript" src="./js/scrollToTop.js"></script>
     <script defer type="text/javascript" src="./js/horizScrollToggler.js"></script>
@@ -41,7 +43,11 @@
 </head>
 
 <body ontouchstart="">
-    <button onclick="topFunction()" id="scroll-to-top-button" title="Go to top">&#8593;</button>
+    <div id="loading-overlay">
+        <div id="loading-overlay-content">
+            <div class="loader"></div>
+        </div>
+    </div>
     <div class="page-container" id="page-container">
         <div class="navbar-wrapper">
             <nav class="navbar">
@@ -419,6 +425,7 @@
 
         </footer>
     </div>
+    <button onclick="topFunction()" id="scroll-to-top-button" title="Go to top">&#8593;</button>
     <div class="modal" id="getMerchModal">
         <div class="modal-header">
             <div class="title">Want this merch?</div>
