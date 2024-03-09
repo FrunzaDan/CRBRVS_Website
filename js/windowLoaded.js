@@ -3,5 +3,5 @@ window.addEventListener("load", (event) => {
     loadingOverlay.style.opacity = 0;
     setTimeout(() => {
         loadingOverlay.style.display = "none";
-    }, 1000);
+    }, 800);
 });

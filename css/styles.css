@@ -290,10 +290,9 @@ input:focus {
     left: 0;
     bottom: 0;
     right: 0;
-    background: rgba(4, 88, 85, 0.94);
+    background: rgba(4, 88, 85, 0.9);
     color: var(--main-light-color);
-    ;
-    transition: 1s 0.4s;
+    transition: 0.6s 0.2s;
 }
 
 #loading-overlay-content {
@@ -301,7 +300,7 @@ input:focus {
     justify-content: center;
     align-items: center;
     position: absolute;
-    color: white;
+    color: var(--main-light-color);
     left: 0;
     right: 0;
     margin-left: auto;

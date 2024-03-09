@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "T-Shirt",
+    "price": 90,
+    "description": "T-Shirt",
+    "imagePath": "./assets/images/merch/merch-1.webp"
+  },
+  {
+    "id": 2,
+    "name": "T-Shirt",
+    "price": 90,
+    "description": "T-Shirt",
+    "imagePath": "./assets/images/merch/merch-2.webp"
+  },
+  {
+    "id": 3,
+    "name": "T-Shirt",
+    "price": 90,
+    "description": "T-Shirt",
+    "imagePath": "./assets/images/merch/merch-3.webp"
+  },
+  {
+    "id": 4,
+    "name": "CD",
+    "price": 60,
+    "description": "CD",
+    "imagePath": "./assets/images/merch/merch-4.webp"
+  },
+  {
+    "id": 5,
+    "name": "CD",
+    "price": 30,
+    "description": "CD",
+    "imagePath": "./assets/images/merch/merch-5.webp"
+  }
+]
