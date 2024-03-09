@@ -41,7 +41,7 @@
         opacity: 1;
     }
 
-    .hoverItemVideo:hover {
+    .hover-item-video:hover {
         transform: scale(1.01);
     }
 
@@ -49,7 +49,7 @@
         transform: scale(1.2);
     }
 
-    .hoverItemVideo:hover {
+    .hover-item-video:hover {
         transform: scale(1.01);
     }
 
@@ -92,7 +92,7 @@
         opacity: 1;
     }
 
-    .hoverItemVideo:active {
+    .hover-item-video:active {
         transform: scale(1.01);
     }
 
@@ -100,7 +100,7 @@
         transform: scale(1.2);
     }
 
-    .hoverItemVideo:active {
+    .hover-item-video:active {
         transform: scale(1.01);
     }
 

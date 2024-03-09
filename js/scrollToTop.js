@@ -10,7 +10,6 @@ scroller.addEventListener("scroll", (event) => {
 });
 
 function topFunction() {
-    console.log("Top Scroll Triggered");
 
     var myDiv = document.getElementById("page-container");
     myDiv.scrollTop = 0;

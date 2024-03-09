@@ -30,8 +30,8 @@
     display: flex;
     width: 100%;
     max-width: 20rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 .buy-button-style {
@@ -97,6 +97,13 @@
         transform: translateY(46px);
     }
 
+}
+
+@media(min-width:576px) and (max-width:768px) {
+    .merch-card {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 }
 
 @media(max-width:576px) {
