@@ -19,9 +19,7 @@ let fullList = false;
 let musicIndex = null;
 isMusicPaused = true;
 
-window.addEventListener("load", () => {
-  loadMusicPlayer();
-});
+loadMusicPlayer();
 
 async function loadMusicPlayer() {
   allMusic = await fetchData();

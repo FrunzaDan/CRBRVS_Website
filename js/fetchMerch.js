@@ -5,9 +5,7 @@ const merchJson = '../product-list.json';
 
 const imagesArray = [];
 
-window.addEventListener("load", () => {
-    loadMerchSection();
-});
+loadMerchSection();
 
 async function loadMerchSection() {
     merch = await fetchProductsData();

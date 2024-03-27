@@ -1,6 +1,6 @@
 const newURL = "https://crbrvsraphive.com/";
 
-window.onload = redirect(newURL);
+redirect(newURL);
 
 function fetchData(url) {
     return fetch(url)
