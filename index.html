@@ -27,7 +27,6 @@
     <link rel="icon" type="image/png" href="/assets/images/favicon.ico">
 
     <!-- SCRIPTS -->
-    <script type="text/javascript" src="./js/redirect.js"></script>
     <script type="text/javascript" src="./js/windowLoaded.js"></script>
     <script defer type="text/javascript" src="./js/navBarToggler.js"></script>
     <script defer type="text/javascript" src="./js/scrollToTop.js"></script>
@@ -48,13 +47,13 @@
             <div class="loader"></div>
         </div>
     </div>
-    <div class="page-container" id="page-container">
+    <div id="page-container">
         <div class="navbar-wrapper">
             <nav class="navbar">
                 <a href="#music-section" class="nav-branding">
                     <img class="navLogo hover-item" src="./assets/images/crbrvs_logo.png" alt="Logo">
                 </a>
-                <ul class="nav-menu">
+                <ul class="nav-menu custom-nav-list">
                     <li class="nav-item">
                         <a href="#music-section" class="nav-link">Music</a>
                     </li>
@@ -399,8 +398,8 @@
         };
 
         // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+        const app = initializeApp( firebaseConfig );
+        const analytics = getAnalytics( app );
     </script>
 </body>
 

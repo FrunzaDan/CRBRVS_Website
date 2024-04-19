@@ -1,17 +1,17 @@
-const scroller = document.querySelector("#page-container");
-const scrollToTopButton = document.getElementById("scroll-to-top-button");
+const scroller = document.getElementById( "page-container" );
+const scrollToTopButton = document.getElementById( "scroll-to-top-button" );
 
-scroller.addEventListener("scroll", (event) => {
-    if (scroller.scrollTop > 600) {
-        scrollToTopButton.classList.add('active');
+scroller.addEventListener( "scroll", ( event ) => {
+    if ( scroller.scrollTop > 600 ) {
+        scrollToTopButton.classList.add( 'active' );
     } else {
-        scrollToTopButton.classList.remove('active');
+        scrollToTopButton.classList.remove( 'active' );
     }
-});
+} );
 
 function topFunction() {
 
-    var myDiv = document.getElementById("page-container");
+    var myDiv = document.getElementById( "page-container" );
     myDiv.scrollTop = 0;
 }
 

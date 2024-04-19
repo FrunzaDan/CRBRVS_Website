@@ -353,7 +353,7 @@ input:focus {
     transform: translateY(4px);
 }
 
-.page-container {
+#page-container {
     margin: 0px;
     padding: 0px;
     height: 100dvh;
@@ -368,7 +368,7 @@ input:focus {
     position: relative;
 }
 
-.page-container.noScroll {
+#page-container.noScroll {
     overflow-x: hidden;
     overflow-y: hidden;
 }

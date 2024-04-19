@@ -1,7 +1,7 @@
 .hero-label {
     display: flex;
     position: absolute;
-    height: 40em;
+    height: 46em;
     width: 100%;
     z-index: auto;
 }

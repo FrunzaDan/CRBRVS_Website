@@ -155,4 +155,8 @@
     .nav-branding {
         font-size: 3rem;
     }
+
+    .custom-nav-list {
+        filter: drop-shadow(0 0 3rem var(--main-light-color))
+    }
 }
