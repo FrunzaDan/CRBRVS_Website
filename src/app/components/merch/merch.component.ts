@@ -32,8 +32,7 @@ export class MerchComponent implements OnInit {
   scrollRight(end: boolean = false) {
     if (this.merchScrollContainer) {
       this.scrollerService.scrollToRight(
-        this.merchScrollContainer.nativeElement,
-        end
+        this.merchScrollContainer.nativeElement
       );
     }
   }
