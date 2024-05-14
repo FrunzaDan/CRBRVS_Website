@@ -1,0 +1,70 @@
+#background-image-merch {
+    background-image: linear-gradient(-45deg, rgba(255, 55, 120, 0.6), rgba(1, 92, 87, 0.6)), url(/assets/images/crbrvs3.webp);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.merch-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.merch-img {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    max-width: 18rem;
+    filter: drop-shadow(4px 4px var(--main-second-color)) drop-shadow(4px 4px var(--main-first-color)) drop-shadow(4px 4px var(--main-second-color));
+}
+
+.merch-card {
+    display: flex;
+    width: 100%;
+    max-width: 20rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.buy-button-style {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    min-height: 50px;
+    font-size: 1.25rem;
+}
+
+#horizontal-scroll-container {
+    display: flex;
+    width: 94%;
+    height: 30rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-radius: 1rem;
+    border: 0.2rem solid var(--main-second-color);
+    padding: 1rem;
+    margin: 1rem 0rem;
+
+}
+
+@media(min-width:576px) and (max-width:768px) {
+    .merch-card {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+@media(max-width:576px) {
+    .merch-card {
+        max-width: 18rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}

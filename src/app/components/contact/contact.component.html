@@ -1,0 +1,85 @@
+<section id="contact-section">
+    <div class="container-fluid p-2" id="background-image-contact">
+        <div class="row p-2">
+            <div class="section-title">
+                <div class="rectangle-back"></div>
+                <div class="section-title-intro-text">
+                    Contact.
+                </div>
+                <div class="rectangle-front"></div>
+            </div>
+        </div>
+        <div class="row p-2">
+            <div class="col">
+                <div class="text-style-1">
+                    Wanna get in touch? Don't hesitate!
+                </div>
+            </div>
+        </div>
+        <div class="row p-2">
+            <div class="col-md-8 col-sm-7">
+                <div class="card contact-card hover-card">
+                    <div class="contact-info">
+                        <div class="contact-info-entry">
+                            <p class="contact-card-text-title">Contact Info:</p>
+                        </div>
+                        <div class="contact-info-entry">
+                            <i class="bi bi-envelope contact-card-icons me-2"></i><span
+                                class="card-subtitle mb-2 contact-card-text">E-mail:</span><br>
+                            <p class="contact-card-text">
+                                <a href="mailto:crbrvsraps@gmail.com">crbrvsraps&#64;gmail.com</a>
+                            </p>
+                        </div>
+                        <div class="contact-info-entry">
+                            <i class="bi bi-telephone contact-card-icons me-2"></i><span
+                                class="card-subtitle contact-card-text">Phone:</span>
+                            <p class="contact-card-text">
+                                <a href="tel:+40744210017">+40744210017</a>
+                            </p>
+                        </div>
+                        <div class="contact-info-entry">
+                            <i class="bi bi-facebook contact-card-icons me-2"></i><span
+                                class="card-subtitle contact-card-text">Facebook:</span>
+                            <p class="contact-card-text">
+                                <a href="https://www.facebook.com/CRBRVS/">facebook.com/CRBRVS</a>
+                            </p>
+                        </div>
+                        <div class="contact-info-entry">
+                            <i class="bi bi-instagram contact-card-icons me-2"></i><span
+                                class="card-subtitle contact-card-text">Instagram:</span>
+                            <p class="contact-card-text">
+                                <a href="https://www.instagram.com/_crbrvs/">instagram.com/_crbrvs</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-5">
+                <div class="card contact-card hover-card">
+                    <form id="contactForm" onsubmit="sendEmail(); reset(); return false">
+                        <div class="formContainer">
+                            <div class="form-label-input">
+                                <label for="from_name" class="form-label">Name:</label>
+                                <input class="form-control" id="from_name" type="text" placeholder="Your Name"
+                                    required />
+                            </div>
+                            <div class="form-label-input">
+                                <label for="from_email" class="form-label">E-mail:</label>
+                                <input class="form-control" id="from_email" type="email"
+                                    placeholder="Your E-mail Address" required />
+                            </div>
+                            <div class="form-label-input">
+                                <label for="from_message" class="form-label">Message:</label>
+                                <textarea class="form-control" id="from_message" type="text" placeholder="Your Message"
+                                    required style="height: 10rem"></textarea>
+                            </div>
+                            <div class="send-button-container">
+                                <button class="send-button-style" type="submit">Send!</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

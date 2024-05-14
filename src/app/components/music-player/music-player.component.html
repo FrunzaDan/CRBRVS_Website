@@ -1,0 +1,23 @@
+<div *ngIf="currentSong" class="music-player">
+    <img class="artwork" src="{{ currentSong.artwork }}" alt="artwork">
+    <div class="song-info">
+        {{ currentSong.title }}
+    </div>
+    <div class="song-info">
+        {{ currentIndex + 1 }}/{{ songs.length }}
+    </div>
+
+    <div class="progress-bar">
+        <progress [value]="currentTime" max="{{ currentAudioDuration || 0 }}"
+            [attr.aria-valuemax]="currentAudioDuration || 0" class="custom-progress"> </progress>
+        <span class="elapsed-time">{{ formatTime(currentTime) }}s/{{currentAudioDuration}}s</span>
+
+    </div>
+    <div class="player-controls">
+        <button (click)="playPreviousSong()"><span class="player-action-icon action-btn-backward"></span></button>
+        <button (click)="playStopSong()">
+            <span class="player-action-icon action-btn-{{ isPlaying ? 'stop' : 'play' }}"></span>
+        </button>
+        <button (click)="playNextSong()"><span class="player-action-icon action-btn-forward"></span></button>
+    </div>
+</div>

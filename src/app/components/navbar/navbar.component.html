@@ -1,0 +1,32 @@
+<div class="navbar-wrapper">
+    <nav class="navbar navbar-expand-sm navbar-custom-style" id="navbar-id">
+        <img (click)="scrollToSection('music-section')" class="nav-logo hover-item"
+            src="../../../assets/images/crbrvs_logo.svg" alt="Logo">
+
+        <a class="navbar-toggler collapsed border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span> </span>
+            <span> </span>
+            <span> </span>
+        </a>
+
+        <div class="collapse navbar-collapse justify-content-end align-center" id="navbarSupportedContent">
+            <ul class="navbar-nav custom-nav-list">
+                <li class="nav-item">
+                    <div (click)="scrollToSection('music-section')" class="nav-link" data-bs-toggle="collapse"
+                        data-bs-target=".navbar-collapse.show">Music</div>
+                </li>
+                <li class="nav-item">
+                    <div (click)="scrollToSection('merch-section')" class="nav-link" data-bs-toggle="collapse"
+                        data-bs-target=".navbar-collapse.show">Merch</div>
+                </li>
+                <li class="nav-item">
+                    <div (click)="scrollToSection('contact-section')" class="nav-link" data-bs-toggle="collapse"
+                        data-bs-target=".navbar-collapse.show">Contact</div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
