@@ -20,10 +20,12 @@ body {
     overflow-x: clip;
     scroll-behavior: smooth;
     scrollbar-width: none;
-
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    overscroll-behavior-y: none;
+    overscroll-behavior-x: none;
 }
 
 ::-webkit-scrollbar {

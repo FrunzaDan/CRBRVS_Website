@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { LoadMerchService } from '../../services/load-merch.service';
+import { ScrollerService } from '../../services/scroller.service';
 
 @Component({
   selector: 'app-merch',
@@ -10,7 +11,30 @@ import { LoadMerchService } from '../../services/load-merch.service';
   styleUrl: './merch.component.css',
 })
 export class MerchComponent implements OnInit {
-  constructor(private loadMerchService: LoadMerchService) {}
+  @ViewChild('merchScrollContainer') merchScrollContainer:
+    | ElementRef
+    | undefined;
+  constructor(
+    private loadMerchService: LoadMerchService,
+    public scrollerService: ScrollerService
+  ) {}
 
   ngOnInit() {}
+
+  scrollLeft() {
+    if (this.merchScrollContainer) {
+      this.scrollerService.scrollToLeft(
+        this.merchScrollContainer.nativeElement
+      );
+    }
+  }
+
+  scrollRight(end: boolean = false) {
+    if (this.merchScrollContainer) {
+      this.scrollerService.scrollToRight(
+        this.merchScrollContainer.nativeElement,
+        end
+      );
+    }
+  }
 }

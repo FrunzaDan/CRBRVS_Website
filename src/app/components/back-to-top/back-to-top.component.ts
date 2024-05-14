@@ -24,16 +24,12 @@ import {
   ],
 })
 export class BackToTopComponent {
-  constructor(private scrollerService: ScrollerService) {}
+  constructor(public scrollerService: ScrollerService) {}
 
   shouldShowBackToTopButton = false;
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll($event: any) {
     this.shouldShowBackToTopButton = window.scrollY > 500;
-  }
-
-  topFunction(): void {
-    this.scrollerService.scrollToTop();
   }
 }
