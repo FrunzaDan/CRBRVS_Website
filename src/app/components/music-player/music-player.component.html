@@ -14,10 +14,12 @@
 
     </div>
     <div class="player-controls">
-        <button (click)="playPreviousSong()"><span class="player-action-icon action-btn-backward"></span></button>
-        <button (click)="playStopSong()">
+        <button class="player-controls-btn" (click)="playPreviousSong()"><span
+                class="player-action-icon action-btn-backward"></span></button>
+        <button class="player-controls-btn" (click)="playStopSong()">
             <span class="player-action-icon action-btn-{{ isPlaying ? 'stop' : 'play' }}"></span>
         </button>
-        <button (click)="playNextSong()"><span class="player-action-icon action-btn-forward"></span></button>
+        <button class="player-controls-btn" (click)="playNextSong()"><span
+                class="player-action-icon action-btn-forward"></span></button>
     </div>
 </div>

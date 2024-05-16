@@ -82,9 +82,9 @@ button {
     color: var(--main-light-color);
     background-color: var(--main-second-color);
     border-radius: 8px;
-    border: 1px var(--main-dark-color) solid;
+    border: 1px var(--main-light-color) solid;
     cursor: pointer;
-    transition: all .2s;
+    transition: all .2s ease-in-out;
 }
 
 .fullSpaceHref {
@@ -98,6 +98,7 @@ button {
 button:active {
     color: var(--main-light-color);
     background-color: var(--main-second-color);
+    border: 1px var(--main-second-color) solid;
 }
 
 textarea,
@@ -164,6 +165,39 @@ input:focus {
     height: 200px;
     margin-top: 5%;
     margin-bottom: 5%;
+}
+
+.text-muted {
+    color: var(--main-second-color) !important;
+}
+
+.player-controls-btn {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: 1px var(--main-second-color) solid;
+    border-radius: 1rem;
+    background-color: var(--main-second-color);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.player-action-icon {
+    background-size: contain;
+    width: 2rem;
+    height: 2rem;
+}
+
+.action-btn-forward {
+    background-image: url(./assets/MusicPlayer/next-button-svgrepo-com.svg);
+
+}
+
+.action-btn-backward {
+    background-image: url(./assets/MusicPlayer/next-button-svgrepo-com.svg);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 .rectangle-back {
@@ -241,13 +275,13 @@ input:focus {
 
 .hover-item-video {
     display: inline-block;
-    transition: all .2s;
+    transition: all .2s ease-in-out;
     transform-origin: 50% 50%;
 }
 
 .hover-icon {
     display: inline-block;
-    transition: all .2s;
+    transition: all .2s ease-in-out;
     transform-origin: 50% 50%;
 }
 
@@ -451,13 +485,13 @@ iframe {
 
 .hover-item {
     display: inline-block;
-    transition: all .2s;
+    transition: all .2s ease-in-out;
     transform-origin: 50% 50%;
 }
 
 .hover-card {
     display: inline-block;
-    transition: all .2s;
+    transition: all .2s ease-in-out;
     transform-origin: 50% 50%;
 }
 
@@ -486,6 +520,7 @@ iframe {
     button:hover {
         color: var(--main-second-color);
         background-color: var(--main-light-color);
+        border: 1px var(--main-second-color) solid;
     }
 
     #scroll-to-top-btn.active:hover {

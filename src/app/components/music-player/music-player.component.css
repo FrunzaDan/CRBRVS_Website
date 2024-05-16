@@ -24,41 +24,12 @@
     justify-content: space-between;
 }
 
-.player-controls button {
-    padding: 0.5rem;
-    margin: 0.5rem;
-    border: none;
-    border-radius: 1rem;
-    background-color: var(--main-second-color);
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-
-.player-action-icon {
-    background-size: contain;
-    width: 2rem;
-    height: 2rem;
-}
-
 .action-btn-play {
     background-image: url(../../../assets/MusicPlayer/play-button-svgrepo-com.svg);
 }
 
 .action-btn-stop {
     background-image: url(../../../assets/MusicPlayer/stop-button-svgrepo-com.svg);
-}
-
-.action-btn-forward {
-    background-image: url(../../../assets/MusicPlayer/next-button-svgrepo-com.svg);
-
-}
-
-.action-btn-backward {
-    background-image: url(../../../assets/MusicPlayer/next-button-svgrepo-com.svg);
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
 }
 
 .progress-bar {

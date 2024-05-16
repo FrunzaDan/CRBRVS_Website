@@ -9,7 +9,7 @@ import { MerchItem } from '../interfaces/merch-item';
 export class LoadMerchService {
   constructor(private http: HttpClient) {}
 
-  loadMusic(): Observable<MerchItem[]> {
+  loadMerch(): Observable<MerchItem[]> {
     return this.http.get<MerchItem[]>('../../assets/merch-list.json');
   }
 }

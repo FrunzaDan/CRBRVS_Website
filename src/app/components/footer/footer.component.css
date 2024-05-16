@@ -62,13 +62,14 @@
 
 .danfrunzaIcon {
     background-image: url(../../../assets/images/danfrunza.ico);
-    height: 1em;
-    width: 1em;
+    height: 1.2rem;
+    width: 1.2rem;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
     margin-left: .25em;
+    filter: invert(47%) sepia(53%) saturate(6454%) hue-rotate(319deg) brightness(100%) contrast(105%) drop-shadow(2px 2px 0px var(--main-first-color));
 }
 
 /* VERY LARGE SCREENS: */
@@ -229,9 +230,8 @@
         margin-top: 10px;
     }
 
-    .SAL-SOL {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        width: 10rem;
+    .danfrunzaIcon {
+        height: 1rem;
+        width: 1rem;
     }
 }

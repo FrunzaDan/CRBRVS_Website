@@ -16,18 +16,31 @@
                 </div>
             </div>
         </div>
-        <div id="horizontal-scroll-container" #merchScrollContainer>
-            TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST
-            TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST
-            TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST
-            TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST
-            TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST
-            TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST
-            TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST
-            TESTTESTTEST TESTTESTTEST TESTTESTTEST TESTTESTTEST
-        </div>
-        <button (click)="scrollLeft()">Scroll Left</button>
-        <button (click)="scrollRight()">Scroll Right</button>
+        <div class="row px-2">
+            <div class="col d-flex justify-content-center align-items-center">
+                <div id="horizontal-scroll-container" #merchScrollContainer>
+                    <ng-container *ngFor="let merchItem of merchItems">
+                        <div class="card merch-card hover-card">
+                            <div class="merch-img-container">
+                                <img class="merch-img" src={{merchItem.src}} alt="merch-item">
+                            </div>
+                            <div class="card-footer">
+                                <p>{{merchItem.price}} RON</p>
+                                <button (click)="openMerchItem()" class="buy-button-style">Get it!</button>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
 
+            </div>
+        </div>
+        <div class="row px-2">
+            <div class="col d-flex justify-content-center align-items-center pb-4">
+                <button class="player-controls-btn" (click)="scrollLeft()"><span
+                        class="player-action-icon action-btn-backward"></span></button>
+                <button class="player-controls-btn" (click)="scrollRight()"><span
+                        class="player-action-icon action-btn-forward"></span></button>
+            </div>
+        </div>
     </div>
 </section>

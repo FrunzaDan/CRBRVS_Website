@@ -105,12 +105,10 @@ export class MusicPlayerComponent implements OnInit {
         if (this.isPlaying) {
           this.currentTime = this.audio.currentTime;
           this.currentAudioDuration = Math.ceil(this.audio.duration);
-          console.log('a');
         } else {
           clearInterval(updateInterval);
           this.audio.currentTime = 0;
           this.currentAudioDuration = 0;
-          console.log('b');
         }
       }
     }, 200);
@@ -122,7 +120,6 @@ export class MusicPlayerComponent implements OnInit {
       if (this.audio) {
         if (this.audio.paused) {
           this.audio.pause();
-          console.log('c');
         }
       }
     };
