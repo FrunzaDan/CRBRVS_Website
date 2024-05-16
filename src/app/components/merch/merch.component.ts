@@ -1,5 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { LoadMerchService } from '../../services/load-merch.service';
 import { ScrollerService } from '../../services/scroller.service';
 import { MerchItem } from '../../interfaces/merch-item';
@@ -13,7 +19,7 @@ import { take } from 'rxjs/internal/operators/take';
   templateUrl: './merch.component.html',
   styleUrl: './merch.component.css',
 })
-export class MerchComponent implements OnInit {
+export class MerchComponent implements OnInit, OnDestroy {
   @ViewChild('merchScrollContainer') merchScrollContainer:
     | ElementRef
     | undefined;
@@ -28,14 +34,6 @@ export class MerchComponent implements OnInit {
   ngOnInit() {
     this.loadMerchOnce();
   }
-
-  // displayMerchItems() {
-  //   this.merchSubscription = this.loadMerchService
-  //     .loadMerch()
-  //     .subscribe((merchList: MerchItem[]): void => {
-  //       this.merchItems = merchList;
-  //     });
-  // }
 
   ngOnDestroy() {
     this.unsubscribeIfActive();
