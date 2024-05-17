@@ -1,16 +1,16 @@
 export const environment = {
   firebaseConfig: {
-    apiKey: 'AIzaSyA51dGumRfneEiJX6hgWmSS5mDPuZLuwbI',
-    authDomain: 'imalo-education.firebaseapp.com',
-    projectId: 'imalo-education',
-    storageBucket: 'imalo-education.appspot.com',
-    messagingSenderId: '698470412791',
-    appId: '1:698470412791:web:9c8e86e805dcd0ccae3ef2',
-    measurementId: 'G-XCK62ZX1GF',
+    apiKey: 'AIzaSyByp45LFfniaEJYhLCPJaeAe7lAzngQz9I',
+    authDomain: 'crbrvs-rap.firebaseapp.com',
+    projectId: 'crbrvs-rap',
+    storageBucket: 'crbrvs-rap.appspot.com',
+    messagingSenderId: '908885512149',
+    appId: '1:908885512149:web:68d70906015b90334fb75c',
+    measurementId: 'G-SL1CBKCW86',
   },
   emailJSConfig: {
-    serviceID: 'service_5r2odqt',
-    templateID: 'template_ukta2bb',
-    publicKey: 'BdxEcu5ywdwa_-ej6',
+    serviceID: 'service_18d4o96',
+    templateID: 'template_8x0hf1t',
+    publicKey: 'QiF7sSqrneVD-M8af',
   },
 };

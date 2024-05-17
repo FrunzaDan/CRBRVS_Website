@@ -322,22 +322,31 @@ iframe {
     text-shadow: 3px 3px var(--main-first-color);
 }
 
-.front-rect {
-    border-right-width: 10px;
-    border-right-style: solid;
-    border-right-color: transparent;
-    border-image: linear-gradient(to bottom, var(--main-second-color) 0%, #ff5252 100%);
-    border-image-slice: 1;
-    width: 10rem;
-    height: 20rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    z-index: 4;
+.nav-link {
+    font-family: var(--Bold-font);
+    color: var(--main-second-color);
+    text-shadow: 6px 6px var(--main-first-color);
+    font-size: 5rem;
+    transition: all 0.6s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+@media(min-width:768px) and (max-width:1100px) {
+    .nav-link {
+        font-size: 3rem;
+    }
+
+    .section-name {
+        font-size: 6.25rem;
+    }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
+    .nav-link {
+        font-size: 2rem;
+    }
+
     .text-style-1 {
         font-size: 2.6rem;
     }
@@ -411,12 +420,7 @@ iframe {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1100px) {
-
-    .section-name {
-        font-size: 6.25rem;
-    }
-}
+@media only screen and (min-width: 768px) and (max-width: 1100px) {}
 
 @media(min-width:576px) and (max-width:768px) {
 
@@ -436,7 +440,7 @@ iframe {
     }
 
     .card {
-        padding: 0.6rem;
+        padding: 0.8rem;
     }
 }
 
@@ -472,7 +476,7 @@ iframe {
     }
 
     .nav-link:hover {
-        color: white;
+        color: var(--main-light-color);
         text-shadow: 6px 6px var(--main-second-color);
     }
 
@@ -524,7 +528,7 @@ iframe {
     }
 
     .nav-link:active {
-        color: white;
+        color: var(--main-light-color);
         text-shadow: 6px 6px var(--main-second-color);
     }
 

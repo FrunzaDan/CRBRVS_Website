@@ -25,9 +25,7 @@ export const appConfig: ApplicationConfig = {
     ),
     provideClientHydration(),
     provideHttpClient(withFetch()),
-    importProvidersFrom([
-      provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-      provideAnalytics(() => getAnalytics()),
-    ]),
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideAnalytics(() => getAnalytics()),
   ],
 };

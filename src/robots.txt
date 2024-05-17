@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://crbrvs-rap.web.app/sitemap.xml
+Sitemap: https://crbrvsraphive.com/sitemap.xml

@@ -10,7 +10,10 @@
     <div class="progress-bar">
         <progress [value]="currentTime" max="{{ currentAudioDuration || 0 }}"
             [attr.aria-valuemax]="currentAudioDuration || 0" class="custom-progress"> </progress>
-        <span class="elapsed-time">{{ formatTime(currentTime) }}s/{{currentAudioDuration}}s</span>
+        <div class="row d-flex justify-content-between width-100">
+            <div class="col-6 d-flex justify-content-start">{{ formatTime(currentTime) }}s</div>
+            <div class="col-6 d-flex justify-content-end">{{currentAudioDuration}}s</div>
+        </div>
 
     </div>
     <div class="player-controls">
