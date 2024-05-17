@@ -104,49 +104,39 @@ export class MusicPlayerComponent implements OnInit, OnDestroy {
     );
   }
 
-  private updateProgressBar() {
-    if (!this.audio) {
-      return;
-    }
+  private updateProgressBar(): void {
+    if (!this.audio) return;
 
     const updateInterval = setInterval(() => {
       console.log('a');
-      if (this.audio) {
-        if (this.isPlaying) {
-          this.currentTime = this.audio.currentTime;
-          this.currentAudioDuration = Math.ceil(this.audio.duration);
-        } else {
-          clearInterval(updateInterval);
-          this.audio.currentTime = 0;
-          this.currentAudioDuration = 0;
-        }
+      if (this.audio && this.isPlaying) {
+        this.currentTime = this.audio.currentTime;
+        this.currentAudioDuration = Math.ceil(this.audio.duration);
+      } else {
+        clearInterval(updateInterval);
+        this.currentTime = 0;
+        this.currentAudioDuration = 0;
       }
     }, 200);
 
     const onAudioPause = () => {
-      if (updateInterval) {
-        clearInterval(updateInterval);
-      }
-      if (this.audio) {
-        if (this.audio.paused) {
-          this.audio.pause();
-        }
-      }
+      clearInterval(updateInterval);
+      if (this.audio && this.audio.paused) this.audio.pause();
     };
 
     this.audio.addEventListener('pause', onAudioPause);
   }
 
   formatTime(seconds: number): string {
-    const minutes = Math.floor(seconds / 60);
-    const remainingSeconds = Math.floor(seconds % 60);
+    const minutes: number = Math.floor(seconds / 60);
+    const remainingSeconds: number = Math.floor(seconds % 60);
     return remainingSeconds.toString().padStart(2, '0');
   }
 
   private unsubscribeIfActive() {
     if (this.musicSubscription) {
       this.musicSubscription.unsubscribe();
-      this.musicSubscription = undefined; // Clear reference
+      this.musicSubscription = undefined;
     }
   }
 }
