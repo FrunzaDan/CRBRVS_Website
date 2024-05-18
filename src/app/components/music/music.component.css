@@ -83,8 +83,9 @@
     align-items: center;
     text-align: center;
     color: var(--main-second-color);
-    text-shadow: 2px 2px var(--main-first-color);
-    font-size: 5rem;
+    text-shadow: 4px 4px var(--main-first-color);
+    font-size: 4rem;
+    padding: 0 0.2rem;
 }
 
 .music-link-card {
@@ -95,10 +96,8 @@
     cursor: pointer;
 }
 
-.musicLogoContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.yt-custom-icon {
+    font-size: 8rem;
 }
 
 .music-logo {
@@ -119,7 +118,7 @@
 @media(min-width:768px) and (max-width:880px) {
 
     .video-overlay {
-        font-size: 3.75rem;
+        font-size: 3rem;
         text-wrap: balance;
     }
 
@@ -129,6 +128,10 @@
 
     .music-logo {
         width: 90px;
+    }
+
+    .yt-custom-icon {
+        font-size: 8rem;
     }
 }
 
@@ -144,7 +147,12 @@
     }
 
     .video-overlay {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
+        text-shadow: 3px 3px var(--main-first-color);
+    }
+
+    .yt-custom-icon {
+        font-size: 6rem;
     }
 }
 
@@ -166,6 +174,19 @@
     }
 
     .video-overlay {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
+        text-shadow: 2px 2px var(--main-first-color);
+    }
+
+    .yt-custom-icon {
+        font-size: 3rem;
+    }
+
+    .music-icon-column-left {
+        justify-content: left !important;
+    }
+
+    .music-icon-column-right {
+        justify-content: right !important;
     }
 }
