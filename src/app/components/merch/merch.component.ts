@@ -6,12 +6,12 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import { LoadMerchService } from '../../services/load-merch.service';
-import { ScrollerService } from '../../services/scroller.service';
-import { MerchItem } from '../../interfaces/merch-item';
 import { Subscription } from 'rxjs/internal/Subscription';
 import { take } from 'rxjs/internal/operators/take';
 import { fadeIn, fadeOut, transformIn, transformOut } from '../../animations';
+import { MerchItem } from '../../interfaces/merch-item';
+import { LoadMerchService } from '../../services/load-merch.service';
+import { ScrollerService } from '../../services/scroller.service';
 
 @Component({
   selector: 'app-merch',
@@ -38,29 +38,27 @@ export class MerchComponent implements OnInit, OnDestroy {
     public scrollerService: ScrollerService
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.loadMerchOnce();
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.unsubscribeIfActive();
   }
 
-  private loadMerchOnce() {
+  private loadMerchOnce(): void {
     this.merchSubscription = this.loadMerchService
       .loadMerch()
       .pipe(take(1))
-      .subscribe((merchList: MerchItem[]) => {
+      .subscribe((merchList: MerchItem[]): void => {
         this.merchItems = merchList;
         this.unsubscribeIfActive();
       });
   }
 
-  private unsubscribeIfActive() {
-    if (this.merchSubscription) {
-      this.merchSubscription.unsubscribe();
-      this.merchSubscription = undefined;
-    }
+  private unsubscribeIfActive(): void {
+    this.merchSubscription?.unsubscribe();
+    this.merchSubscription = undefined;
   }
 
   scrollLeft(): void {
@@ -78,14 +76,14 @@ export class MerchComponent implements OnInit, OnDestroy {
       );
     }
   }
-  openMerchItemModal(merchItem: MerchItem) {
+  openMerchItemModal(merchItem: MerchItem): void {
     if (merchItem) {
       this.isMerchModalOpen = true;
       this.selectedMerchItem = merchItem;
     }
   }
 
-  closeMerchItemModal() {
+  closeMerchItemModal(): void {
     this.isMerchModalOpen = false;
     this.selectedMerchItem = undefined;
   }

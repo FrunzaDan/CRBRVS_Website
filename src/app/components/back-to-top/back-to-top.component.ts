@@ -1,6 +1,3 @@
-import { Component, HostListener } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ScrollerService } from '../../services/scroller.service';
 import {
   animate,
   state,
@@ -8,6 +5,9 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
+import { CommonModule } from '@angular/common';
+import { Component, HostListener } from '@angular/core';
+import { ScrollerService } from '../../services/scroller.service';
 
 @Component({
   selector: 'app-back-to-top',
@@ -24,12 +24,22 @@ import {
   ],
 })
 export class BackToTopComponent {
+  private prevScrollPos: number = 0;
+  SHOW_BUTTON_THRESHOLD: number = 1200;
+
   constructor(public scrollerService: ScrollerService) {}
 
   shouldShowBackToTopButton = false;
 
   @HostListener('window:scroll', ['$event'])
-  onWindowScroll($event: any) {
-    this.shouldShowBackToTopButton = window.scrollY > 500;
+  onWindowScroll($event: any): void {
+    const currentScrollPos: number = window.scrollY;
+    const scrolledEnough: boolean =
+      Math.abs(currentScrollPos - this.prevScrollPos) > 400;
+    if (scrolledEnough) {
+      this.shouldShowBackToTopButton =
+        currentScrollPos > this.SHOW_BUTTON_THRESHOLD;
+      this.prevScrollPos = currentScrollPos;
+    }
   }
 }

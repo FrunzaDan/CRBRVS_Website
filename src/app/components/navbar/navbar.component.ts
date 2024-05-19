@@ -1,7 +1,6 @@
 import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -17,6 +16,10 @@ export class NavbarComponent {
   ) {}
 
   public scrollToSection(elementId: string): void {
+    if (!elementId) {
+      console.warn('scrollToSection: Invalid element ID provided.');
+      return;
+    }
     this.viewportScroller.scrollToAnchor(elementId);
     this.router.navigate([], { fragment: elementId });
   }

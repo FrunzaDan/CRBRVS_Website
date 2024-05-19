@@ -12,22 +12,24 @@ export class ScrollerService {
   }
 
   scrollToLeft(container: Element, offset: number = 400): void {
-    const currentScrollLeft = container.scrollLeft;
-    const newScrollLeft = Math.max(currentScrollLeft - offset, 0); // Ensure non-negative scroll position
-
+    if (!container) {
+      return;
+    }
+    const currentScrollLeft: number = container.scrollLeft;
+    const newScrollLeft: number = Math.max(currentScrollLeft - offset, 0);
     container.scrollTo({ behavior: 'smooth', left: newScrollLeft });
   }
 
   scrollToRight(container: Element, offset: number = 400): void {
-    const containerWidth = container.scrollWidth;
-    const currentScrollLeft = container.scrollLeft;
-    const clientWidth = container.clientWidth;
-
-    const maxScrollLeft = containerWidth - clientWidth; // Maximum scrollable position
-
-    let newScrollLeft = currentScrollLeft + offset;
-    newScrollLeft = Math.min(newScrollLeft, maxScrollLeft); // Limit scroll to prevent exceeding container bounds
-
+    if (!container) {
+      return;
+    }
+    const containerWidth: number = container.scrollWidth;
+    const currentScrollLeft: number = container.scrollLeft;
+    const clientWidth: number = container.clientWidth;
+    const maxScrollLeft: number = containerWidth - clientWidth;
+    let newScrollLeft: number = currentScrollLeft + offset;
+    newScrollLeft = Math.min(newScrollLeft, maxScrollLeft);
     container.scrollTo({ behavior: 'smooth', left: newScrollLeft });
   }
 }

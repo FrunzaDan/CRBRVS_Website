@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Song } from '../../interfaces/song';
-import { LoadMusicService } from '../../services/load-music.service';
 import { take } from 'rxjs/internal/operators/take';
 import { Subscription } from 'rxjs/internal/Subscription';
+import { Song } from '../../interfaces/song';
+import { LoadMusicService } from '../../services/load-music.service';
 
 @Component({
   selector: 'app-music-player',
@@ -108,7 +108,6 @@ export class MusicPlayerComponent implements OnInit, OnDestroy {
     if (!this.audio) return;
 
     const updateInterval = setInterval(() => {
-      console.log('a');
       if (this.audio && this.isPlaying) {
         this.currentTime = this.audio.currentTime;
         this.currentAudioDuration = Math.ceil(this.audio.duration);

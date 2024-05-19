@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import emailjs from '@emailjs/browser';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { environment } from '../../environments/environment';
 import { ContactMeForm } from '../interfaces/contact-me-form';
 
@@ -10,7 +10,7 @@ export class SendEmailService {
   constructor() {}
 
   sendEmailJS(contactMeForm: ContactMeForm): Promise<number> {
-    let responseCode = 500;
+    let responseCode: number = 500;
     var params = {
       name: contactMeForm.name,
       email: contactMeForm.email,
@@ -25,11 +25,11 @@ export class SendEmailService {
         environment.emailJSConfig.publicKey
       )
       .then(
-        (success) => {
+        (success: EmailJSResponseStatus): number => {
           responseCode = success.status;
           return responseCode;
         },
-        (error) => {
+        (error): number => {
           responseCode = error.status;
           return responseCode;
         }
