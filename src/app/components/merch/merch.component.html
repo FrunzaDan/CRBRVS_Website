@@ -1,46 +1,45 @@
-<section id="merch">
-    <div class="container-fluid p-2" id="background-image-merch">
-        <div class="row p-2">
-            <div class="section-title">
-                <div class="rectangle-back"></div>
-                <div class="section-title-intro-text">
-                    Merch.
-                </div>
-                <div class="rectangle-front"></div>
+<div class="container-fluid p-2" id="background-image-merch">
+    <div class="row p-2">
+        <div class="section-title">
+            <div class="rectangle-back"></div>
+            <div class="section-title-intro-text">
+                Merch.
             </div>
+            <div class="rectangle-front"></div>
         </div>
-        <div class="row p-2">
-            <div class="col d-flex justify-content-center align-items-center pb-4">
-                <div class="text-style-1">
-                    Wanna wear some spicy shirts? You can have them right now:
-                </div>
-            </div>
-        </div>
-        <div class="row px-2">
-            <div class="col d-flex justify-content-center align-items-center">
-                <div id="horizontal-scroll-container" #merchScrollContainer>
-                    <div class="merch-card hover-card" *ngFor="let merchItem of merchItems">
-                        <img class="merch-img" src={{merchItem.src}} alt="merch-item">
-                        <div class="p-2">
-                            <h4 class="pink-color">{{merchItem.title}}</h4>
-                            <h4 class="pink-color">{{merchItem.price}} RON</h4>
-                        </div>
-                        <button class="width-100" (click)="openMerchItemModal(merchItem)">Seems interesting</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="row px-2">
-            <div class="col d-flex justify-content-center align-items-center pb-4">
-                <button class="player-controls-btn" (click)="scrollLeft()"><span
-                        class="player-action-icon action-btn-backward"></span></button>
-                <button class="player-controls-btn" (click)="scrollRight()"><span
-                        class="player-action-icon action-btn-forward"></span></button>
+    </div>
+    <div class="row p-2">
+        <div class="col d-flex justify-content-center align-items-center pb-4">
+            <div class="text-style-1">
+                Wanna wear some spicy shirts? You can have them right now:
             </div>
         </div>
     </div>
-</section>
+    <div class="row px-2">
+        <div class="col d-flex justify-content-center align-items-center">
+            <div id="horizontal-scroll-container" #merchScrollContainer>
+                <div class="merch-card hover-card" *ngFor="let merchItem of merchItems">
+                    <img class="merch-img" src={{merchItem.src}} alt="merch-item">
+                    <div class="p-2">
+                        <h4 class="pink-color">{{merchItem.title}}</h4>
+                        <h4 class="pink-color">{{merchItem.price}} RON</h4>
+                    </div>
+                    <button class="width-100" (click)="openMerchItemModal(merchItem)">Seems interesting</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row px-2">
+        <div class="col d-flex justify-content-center align-items-center pb-4">
+            <button class="player-controls-btn" (click)="scrollLeft()"><span
+                    class="player-action-icon action-btn-backward"></span></button>
+            <button class="player-controls-btn" (click)="scrollRight()"><span
+                    class="player-action-icon action-btn-forward"></span></button>
+        </div>
+    </div>
+</div>
+
 
 <div class="full-view-background" *ngIf="isMerchModalOpen" @fadeIn @fadeOut (click)="closeMerchItemModal()">
 </div>
