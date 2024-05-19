@@ -1,13 +1,7 @@
 .footer-wrapper {
     background-image: linear-gradient(-45deg, rgba(226, 100, 140, 0.6), rgba(1, 92, 87, 0.4)), url(../../../assets/images/crbrvs6.webp);
-    -webkit-background-position: 50% 20%;
-    -moz-background-position: 50% 20%;
     background-position: 50% 30%;
-    -webkit-background-repeat: no-repeat;
-    -moz-background-repeat: no-repeat;
     background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
     background-size: cover;
     display: flex;
     padding: 1rem;
