@@ -32,7 +32,7 @@
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    max-width: 26rem;
+    max-width: 24rem;
     filter: drop-shadow(4px 4px var(--main-second-color)) drop-shadow(4px 4px var(--main-first-color)) drop-shadow(4px 4px var(--main-second-color));
 }
 
@@ -110,12 +110,16 @@
     .merch-card {
         margin: 0 3rem;
     }
+
+    .merch-img-full {
+        max-width: 20rem;
+    }
 }
 
 @media(max-width:576px) {
 
     .merch-img-full {
-        max-width: 22rem;
+        max-width: 18rem;
     }
 
     .get-merch-modal {
