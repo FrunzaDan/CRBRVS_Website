@@ -128,7 +128,7 @@ export class MusicPlayerComponent implements OnInit, OnDestroy {
 
   formatTime(seconds: number): string {
     const minutes: number = Math.floor(seconds / 60);
-    const remainingSeconds: number = Math.ceil(seconds % 60);
+    const remainingSeconds: number = Math.floor(seconds % 60);
     return remainingSeconds.toString().padStart(2, '0');
   }
 
