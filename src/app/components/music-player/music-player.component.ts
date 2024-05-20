@@ -110,7 +110,7 @@ export class MusicPlayerComponent implements OnInit, OnDestroy {
     const updateInterval = setInterval(() => {
       if (this.audio && this.isPlaying) {
         this.currentTime = this.audio.currentTime;
-        this.currentAudioDuration = Math.ceil(this.audio.duration);
+        this.currentAudioDuration = Math.floor(this.audio.duration);
       } else {
         clearInterval(updateInterval);
         this.currentTime = 0;
@@ -128,7 +128,7 @@ export class MusicPlayerComponent implements OnInit, OnDestroy {
 
   formatTime(seconds: number): string {
     const minutes: number = Math.floor(seconds / 60);
-    const remainingSeconds: number = Math.floor(seconds % 60);
+    const remainingSeconds: number = Math.ceil(seconds % 60);
     return remainingSeconds.toString().padStart(2, '0');
   }
 
