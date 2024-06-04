@@ -52,9 +52,8 @@ export class MerchComponent implements OnInit, OnDestroy {
     this.merchSubscription = this.loadMerchService
       .loadMerch()
       .pipe(take(1))
-      .subscribe((merchList: MerchItem[]): void => {
-        this.merchItems = merchList;
-        this.subscriptionService.unsubscribeIfActive(this.merchSubscription);
+      .subscribe((response: MerchItem[]): void => {
+        this.merchItems = response;
       });
   }
 

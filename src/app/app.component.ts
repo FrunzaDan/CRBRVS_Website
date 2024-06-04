@@ -14,5 +14,5 @@ export class AppComponent implements OnInit {
 
   constructor(private fireAnalytics: Analytics) {}
 
-  ngOnInit() {}
+  ngOnInit(): void {}
 }

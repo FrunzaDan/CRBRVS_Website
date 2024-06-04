@@ -29,13 +29,12 @@ export class MusicPlayerComponent implements OnInit, OnDestroy {
     private subscriptionService: SubscriptionService
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.musicSubscription = this.loadMusicService
       .loadMusic()
       .pipe(take(1))
       .subscribe((response: Song[]) => {
         this.songs = response;
-        this.subscriptionService.unsubscribeIfActive(this.musicSubscription);
       });
     if (this.songs.length > 0) {
       this.currentSong = this.songs[0];
