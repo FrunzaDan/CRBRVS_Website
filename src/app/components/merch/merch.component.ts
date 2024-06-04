@@ -12,6 +12,7 @@ import { fadeIn, fadeOut, transformIn, transformOut } from '../../animations';
 import { MerchItem } from '../../interfaces/merch-item';
 import { LoadMerchService } from '../../services/load-merch.service';
 import { ScrollerService } from '../../services/scroller.service';
+import { SubscriptionService } from '../../services/subscription.service';
 
 @Component({
   selector: 'app-merch',
@@ -35,7 +36,8 @@ export class MerchComponent implements OnInit, OnDestroy {
 
   constructor(
     private loadMerchService: LoadMerchService,
-    public scrollerService: ScrollerService
+    public scrollerService: ScrollerService,
+    private subscriptionService: SubscriptionService
   ) {}
 
   ngOnInit(): void {
@@ -43,7 +45,7 @@ export class MerchComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.unsubscribeIfActive();
+    this.subscriptionService.unsubscribeIfActive(this.merchSubscription);
   }
 
   private loadMerchOnce(): void {
@@ -52,13 +54,8 @@ export class MerchComponent implements OnInit, OnDestroy {
       .pipe(take(1))
       .subscribe((merchList: MerchItem[]): void => {
         this.merchItems = merchList;
-        this.unsubscribeIfActive();
+        this.subscriptionService.unsubscribeIfActive(this.merchSubscription);
       });
-  }
-
-  private unsubscribeIfActive(): void {
-    this.merchSubscription?.unsubscribe();
-    this.merchSubscription = undefined;
   }
 
   scrollLeft(): void {
