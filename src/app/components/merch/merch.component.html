@@ -19,7 +19,7 @@
         <div class="col d-flex justify-content-center align-items-center">
             <div id="horizontal-scroll-container" #merchScrollContainer>
                 <div class="merch-card hover-card" *ngFor="let merchItem of merchItems">
-                    <img class="merch-img" src={{merchItem.src}} alt="merch-item">
+                    <img class="merch-img" src={{merchItem.src}} alt="CRBRVS merch item">
                     <div class="p-2">
                         <h4 class="pink-color">{{merchItem.title}}</h4>
                         <h4 class="pink-color">{{merchItem.price}} RON</h4>
@@ -52,7 +52,7 @@
 
     <div class="container-fluid">
         <div class="row p-2 d-flex justify-content-center align-items-center">
-            <img class="merch-img-full" src={{selectedMerchItem?.src}} alt="merch-item">
+            <img class="merch-img-full" src={{selectedMerchItem?.src}} alt="CRBRVS merch item">
         </div>
         <div class="row p-2">
             <p>Description: {{selectedMerchItem?.description}}</p>

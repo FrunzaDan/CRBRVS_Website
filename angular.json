@@ -21,8 +21,9 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
+              "src/robots.txt",
               "src/sitemap.xml",
-              "src/robots.txt"
+              "src/google829ea8c08fad9b84.html"
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -40,22 +41,23 @@
           },
           "configurations": {
             "production": {
+              "optimization": true,
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "4kb",
-                  "maximumError": "6kb"
+                  "maximumError": "8kb"
                 }
               ],
               "outputHashing": "all"
             },
             "development": {
-              "optimization": false,
+              "optimization": true,
               "extractLicenses": false,
               "sourceMap": true
             }
@@ -88,8 +90,9 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "/src/sitemap.xml",
-              "/src/robots.txt"
+              "src/robots.txt",
+              "src/sitemap.xml",
+              "src/google829ea8c08fad9b84.html"
             ],
             "styles": ["src/styles.css"],
             "scripts": []
