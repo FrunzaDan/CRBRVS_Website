@@ -15,12 +15,11 @@ import { ScrollerService } from '../../services/scroller.service';
 import { SubscriptionService } from '../../services/subscription.service';
 
 @Component({
-  selector: 'app-merch',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './merch.component.html',
-  styleUrl: './merch.component.css',
-  animations: [transformIn, transformOut, fadeIn, fadeOut],
+    selector: 'app-merch',
+    imports: [CommonModule],
+    templateUrl: './merch.component.html',
+    styleUrl: './merch.component.css',
+    animations: [transformIn, transformOut, fadeIn, fadeOut]
 })
 export class MerchComponent implements OnInit, OnDestroy {
   @ViewChild('merchScrollContainer') merchScrollContainer:

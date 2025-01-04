@@ -7,11 +7,10 @@ import { LoadMusicService } from '../../services/load-music.service';
 import { SubscriptionService } from '../../services/subscription.service';
 
 @Component({
-  selector: 'app-music-player',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './music-player.component.html',
-  styleUrl: './music-player.component.css',
+    selector: 'app-music-player',
+    imports: [CommonModule],
+    templateUrl: './music-player.component.html',
+    styleUrl: './music-player.component.css'
 })
 export class MusicPlayerComponent implements OnInit, OnDestroy {
   songs: Song[] = [];

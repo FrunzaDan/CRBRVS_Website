@@ -7,17 +7,16 @@ import { MusicComponent } from '../music/music.component';
 import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
-  selector: 'app-main-page',
-  standalone: true,
-  imports: [
-    NavbarComponent,
-    MusicComponent,
-    MerchComponent,
-    ContactComponent,
-    FooterComponent,
-    BackToTopComponent,
-  ],
-  templateUrl: './main-page.component.html',
-  styleUrl: './main-page.component.css',
+    selector: 'app-main-page',
+    imports: [
+        NavbarComponent,
+        MusicComponent,
+        MerchComponent,
+        ContactComponent,
+        FooterComponent,
+        BackToTopComponent,
+    ],
+    templateUrl: './main-page.component.html',
+    styleUrl: './main-page.component.css'
 })
 export class MainPageComponent {}
