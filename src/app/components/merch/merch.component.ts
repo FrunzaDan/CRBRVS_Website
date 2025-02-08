@@ -4,7 +4,7 @@ import {
   ElementRef,
   OnDestroy,
   OnInit,
-  ViewChild,
+  viewChild
 } from '@angular/core';
 import { Subscription } from 'rxjs/internal/Subscription';
 import { take } from 'rxjs/internal/operators/take';
@@ -22,9 +22,7 @@ import { SubscriptionService } from '../../services/subscription.service';
     animations: [transformIn, transformOut, fadeIn, fadeOut]
 })
 export class MerchComponent implements OnInit, OnDestroy {
-  @ViewChild('merchScrollContainer') merchScrollContainer:
-    | ElementRef
-    | undefined;
+  readonly merchScrollContainer = viewChild<ElementRef>('merchScrollContainer');
   merchItems: MerchItem[] = [];
   selectedMerchItem: MerchItem | undefined;
   isMerchModalOpen: boolean = false;
@@ -57,17 +55,19 @@ export class MerchComponent implements OnInit, OnDestroy {
   }
 
   scrollLeft(): void {
-    if (this.merchScrollContainer) {
+    const merchScrollContainer = this.merchScrollContainer();
+    if (merchScrollContainer) {
       this.scrollerService.scrollToLeft(
-        this.merchScrollContainer.nativeElement
+        merchScrollContainer.nativeElement
       );
     }
   }
 
   scrollRight(end: boolean = false): void {
-    if (this.merchScrollContainer) {
+    const merchScrollContainer = this.merchScrollContainer();
+    if (merchScrollContainer) {
       this.scrollerService.scrollToRight(
-        this.merchScrollContainer.nativeElement
+        merchScrollContainer.nativeElement
       );
     }
   }
