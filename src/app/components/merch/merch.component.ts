@@ -1,14 +1,10 @@
 import {
   Component,
   ElementRef,
-  OnDestroy,
   OnInit,
-  Signal,
-  effect,
   signal,
   viewChild,
 } from '@angular/core';
-import { take } from 'rxjs/operators';
 import { fadeIn, fadeOut, transformIn, transformOut } from '../../animations';
 import { MerchItem } from '../../interfaces/merch-item';
 import { LoadMerchService } from '../../services/load-merch.service';
