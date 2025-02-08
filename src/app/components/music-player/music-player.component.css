@@ -91,7 +91,7 @@ progress[value]::-moz-progress-bar {
 }
 
 .player-controls-btn {
-  background: none;
+  background-color: var(--main-second-color);
   border: none;
   cursor: pointer;
   padding: 0.5rem;
