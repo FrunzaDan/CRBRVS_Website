@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import musicData from '../../assets/music-list.json'; // Importing the JSON data directly
+import musicData from '../../../public/assets/music-list.json';
 import { Song } from '../interfaces/song';
 
 @Injectable({

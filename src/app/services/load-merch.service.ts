@@ -12,7 +12,7 @@ export class LoadMerchService {
   constructor(private http: HttpClient) {}
 
   loadMerch(): Observable<MerchItem[]> {
-    const merchUrl = '../../assets/merch-list.json';
+    const merchUrl = '../../../assets/merch-list.json';
 
     return this.http.get<MerchItem[]>(merchUrl).pipe(
       catchError((): Observable<MerchItem[]> => {

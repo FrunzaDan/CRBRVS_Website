@@ -4,34 +4,34 @@
     "title": "T-Shirt",
     "price": 90,
     "description": "'Make Love' T-Shirt",
-    "src": "../../../assets/images/merch/merch-1.webp"
+    "src": "../assets/images/merch/merch-1.webp"
   },
   {
     "id": 2,
     "title": "T-Shirt",
     "price": 90,
     "description": "'Life Streaming' T-Shirt",
-    "src": "../../../assets/images/merch/merch-2.webp"
+    "src": "../assets/images/merch/merch-2.webp"
   },
   {
     "id": 3,
     "title": "T-Shirt",
     "price": 90,
     "description": "'Back On My $hit' T-Shirt",
-    "src": "../../../assets/images/merch/merch-3.webp"
+    "src": "../assets/images/merch/merch-3.webp"
   },
   {
     "id": 4,
     "title": "CD",
     "price": 60,
     "description": "'Life Streaming' CD",
-    "src": "../../../assets/images/merch/merch-4.webp"
+    "src": "../assets/images/merch/merch-4.webp"
   },
   {
     "id": 5,
     "title": "CD",
     "price": 30,
     "description": "'Darkest Hours Turn Into Brighter Beginnings' CD",
-    "src": "../../../assets/images/merch/merch-5.webp"
+    "src": "../assets/images/merch/merch-5.webp"
   }
 ]

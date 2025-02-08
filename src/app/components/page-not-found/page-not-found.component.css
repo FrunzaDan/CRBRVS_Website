@@ -4,7 +4,7 @@
       rgba(1, 92, 87, 0.6),
       rgba(255, 55, 120, 0.6)
     ),
-    url(../../../assets/images/crbrvs7.webp);
+    url(/assets/images/crbrvs7.webp);
   position: fixed;
   top: 0;
   left: 0;

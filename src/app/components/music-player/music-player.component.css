@@ -31,11 +31,11 @@
 }
 
 .action-btn-play {
-  background-image: url(../../../assets/MusicPlayer/play-button-svgrepo-com.svg);
+  background-image: url('../../../../public/assets/MusicPlayer/play-button-svgrepo-com.svg');
 }
 
 .action-btn-stop {
-  background-image: url(../../../assets/MusicPlayer/stop-button-svgrepo-com.svg);
+  background-image: url('../../../../public/assets/MusicPlayer/stop-button-svgrepo-com.svg');
 }
 
 .progress-bar {

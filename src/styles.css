@@ -120,12 +120,12 @@ input:focus {
 
 @font-face {
   font-family: 'JostRegular';
-  src: url('./assets/fonts/Jost-Regular.ttf');
+  src: url(/assets/fonts/Jost-Regular.ttf);
 }
 
 @font-face {
   font-family: 'JostBold';
-  src: url('./assets/fonts/Jost-Bold.ttf');
+  src: url(/assets/fonts/Jost-Bold.ttf);
 }
 
 .full-view-background {
@@ -214,11 +214,11 @@ input:focus {
 }
 
 .action-btn-forward {
-  background-image: url(./assets/MusicPlayer/next-button-svgrepo-com.svg);
+  background-image: url('../public/assets/MusicPlayer/next-button-svgrepo-com.svg');
 }
 
 .action-btn-backward {
-  background-image: url(./assets/MusicPlayer/next-button-svgrepo-com.svg);
+  background-image: url('../public/assets/MusicPlayer/next-button-svgrepo-com.svg');
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
