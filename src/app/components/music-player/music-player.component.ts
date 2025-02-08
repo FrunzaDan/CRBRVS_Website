@@ -27,7 +27,7 @@ export class MusicPlayerComponent implements OnInit, OnDestroy {
 
   constructor(
     private loadMusicService: LoadMusicService,
-    private subscriptionService: SubscriptionService
+    private subscriptionService: SubscriptionService,
   ) {}
 
   ngOnInit(): void {

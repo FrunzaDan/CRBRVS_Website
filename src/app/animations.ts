@@ -30,7 +30,7 @@ export const transformIn: AnimationTriggerMetadata = trigger('transformIn', [
     }),
     animate(
       '300ms ease-in',
-      style({ transform: 'translate(-50%, -50%) scale(1)' })
+      style({ transform: 'translate(-50%, -50%) scale(1)' }),
     ),
   ]),
 ]);
@@ -41,7 +41,7 @@ export const transformOut: AnimationTriggerMetadata = trigger('transformOut', [
     }),
     animate(
       '300ms ease-out',
-      style({ transform: 'translate(-50%, -50%) scale(0)' })
+      style({ transform: 'translate(-50%, -50%) scale(0)' }),
     ),
   ]),
 ]);

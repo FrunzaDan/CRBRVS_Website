@@ -1,231 +1,236 @@
 .footer-wrapper {
-    background-image: linear-gradient(-45deg, rgba(226, 100, 140, 0.6), rgba(1, 92, 87, 0.4)), url(../../../assets/images/crbrvs6.webp);
-    background-position: 50% 30%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    padding: 1rem;
-    color: var(--main-second-color);
-    text-shadow: 2px 2px var(--main-first-color);
-    font-size: 1.5rem;
-    min-height: 25%;
+  background-image: linear-gradient(
+      -45deg,
+      rgba(226, 100, 140, 0.6),
+      rgba(1, 92, 87, 0.4)
+    ),
+    url(../../../assets/images/crbrvs6.webp);
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  padding: 1rem;
+  color: var(--main-second-color);
+  text-shadow: 2px 2px var(--main-first-color);
+  font-size: 1.5rem;
+  min-height: 25%;
 }
 
 .outerColumnFooter1 {
-    color: var(--main-second-color);
-    display: flex;
-    padding: 5px;
-    text-align: center;
+  color: var(--main-second-color);
+  display: flex;
+  padding: 5px;
+  text-align: center;
 }
 
 .outerColumnFooter2 {
-    display: flex;
-    padding: 5px;
-    text-align: center;
-
+  display: flex;
+  padding: 5px;
+  text-align: center;
 }
 
 .innerColumnFooter11 {
-    padding: 5px;
-    text-align: center;
+  padding: 5px;
+  text-align: center;
 }
 
 .innerColumnFooter12 {
-    padding: 5px;
-    text-align: center;
+  padding: 5px;
+  text-align: center;
 }
 
 .innerColumnFooter21 {
-    padding: 5px;
-    text-align: center;
+  padding: 5px;
+  text-align: center;
 }
 
 .innerColumnFooter22 {
-    padding: 5px;
-    text-align: center;
+  padding: 5px;
+  text-align: center;
 }
 
 .wrapperDeveloped {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    line-height: 1;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  line-height: 1;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .danfrunzaIcon {
-    background-image: url(../../../assets/images/danfrunza.ico);
-    height: 1.2rem;
-    width: 1.2rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
-    margin-left: .25em;
-    filter: invert(47%) sepia(53%) saturate(6454%) hue-rotate(319deg) brightness(100%) contrast(105%) drop-shadow(2px 2px 0px var(--main-first-color));
+  background-image: url(../../../assets/images/danfrunza.ico);
+  height: 1.2rem;
+  width: 1.2rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  margin-left: 0.25em;
+  filter: invert(47%) sepia(53%) saturate(6454%) hue-rotate(319deg)
+    brightness(100%) contrast(105%)
+    drop-shadow(2px 2px 0px var(--main-first-color));
 }
 
 /* VERY LARGE SCREENS: */
 @media only screen and (min-width: 1100px) {
-    .outerColumnFooter1 {
-        justify-content: start;
-    }
+  .outerColumnFooter1 {
+    justify-content: start;
+  }
 
-    .outerColumnFooter2 {
-        justify-content: end;
-    }
+  .outerColumnFooter2 {
+    justify-content: end;
+  }
 
-    .innerColumnFooter11 {
-        padding: 20px;
-        justify-content: start;
-    }
+  .innerColumnFooter11 {
+    padding: 20px;
+    justify-content: start;
+  }
 
-    .innerColumnFooter12 {
-        padding: 20px;
-        justify-content: start;
-    }
+  .innerColumnFooter12 {
+    padding: 20px;
+    justify-content: start;
+  }
 
-    .innerColumnFooter21 {
-        padding: 20px;
-        justify-content: end;
-    }
+  .innerColumnFooter21 {
+    padding: 20px;
+    justify-content: end;
+  }
 
-    .innerColumnFooter22 {
-        padding: 20px;
-        justify-content: end;
-    }
+  .innerColumnFooter22 {
+    padding: 20px;
+    justify-content: end;
+  }
 }
 
 /* LARGE SCREENS: */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
-    .outerColumnFooter1 {
-        justify-content: space-around;
-    }
+  .outerColumnFooter1 {
+    justify-content: space-around;
+  }
 
-    .outerColumnFooter2 {
-        justify-content: end;
-    }
+  .outerColumnFooter2 {
+    justify-content: end;
+  }
 
-    .innerColumnFooter11 {
-        padding: 8px;
-        justify-content: start;
-    }
+  .innerColumnFooter11 {
+    padding: 8px;
+    justify-content: start;
+  }
 
-    .innerColumnFooter12 {
-        padding: 8px;
-        justify-content: start;
-    }
+  .innerColumnFooter12 {
+    padding: 8px;
+    justify-content: start;
+  }
 
-    .innerColumnFooter21 {
-        padding: 8px;
-        justify-content: end;
-    }
+  .innerColumnFooter21 {
+    padding: 8px;
+    justify-content: end;
+  }
 
-    .innerColumnFooter22 {
-        padding: 8px;
-        justify-content: end;
-        text-align: end;
-    }
+  .innerColumnFooter22 {
+    padding: 8px;
+    justify-content: end;
+    text-align: end;
+  }
 }
 
 /* SMALL SCREENS: */
 @media only screen and (min-width: 576px) and (max-width: 768px) {
-    .outerColumnFooter1 {
-        width: 100%;
-        justify-content: space-between;
-    }
+  .outerColumnFooter1 {
+    width: 100%;
+    justify-content: space-between;
+  }
 
-    .outerColumnFooter2 {
-        width: 100%;
-        justify-content: space-between;
-    }
+  .outerColumnFooter2 {
+    width: 100%;
+    justify-content: space-between;
+  }
 
-    .innerColumnFooter11 {
-        padding: 20px;
-        justify-content: start;
-    }
+  .innerColumnFooter11 {
+    padding: 20px;
+    justify-content: start;
+  }
 
-    .innerColumnFooter12 {
-        padding: 20px;
-        justify-content: end;
-    }
+  .innerColumnFooter12 {
+    padding: 20px;
+    justify-content: end;
+  }
 
-    .innerColumnFooter21 {
-        padding: 20px;
-        justify-content: start;
-    }
+  .innerColumnFooter21 {
+    padding: 20px;
+    justify-content: start;
+  }
 
-    .innerColumnFooter22 {
-        padding: 20px;
-        justify-content: end;
-        text-align: end;
-    }
+  .innerColumnFooter22 {
+    padding: 20px;
+    justify-content: end;
+    text-align: end;
+  }
 
-    .wrapperDeveloped {
-        margin-top: 10px;
-    }
+  .wrapperDeveloped {
+    margin-top: 10px;
+  }
 }
 
 /* VERY SMALL SCREENS: */
 @media only screen and (max-width: 576px) {
-    .outerColumnFooter1 {
-        min-width: 100%;
-        padding: 10px;
-        justify-content: center;
-    }
+  .outerColumnFooter1 {
+    min-width: 100%;
+    padding: 10px;
+    justify-content: center;
+  }
 
-    .outerColumnFooter2 {
-        min-width: 100%;
-        padding: 10px;
-        justify-content: center;
-    }
+  .outerColumnFooter2 {
+    min-width: 100%;
+    padding: 10px;
+    justify-content: center;
+  }
 
-    .innerColumnFooter11 {
-        min-width: 100%;
-        padding: 10px;
-        margin-left: 60px;
-        margin-right: 60px;
-        justify-content: center;
+  .innerColumnFooter11 {
+    min-width: 100%;
+    padding: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+    justify-content: center;
+  }
 
-    }
+  .innerColumnFooter12 {
+    min-width: 100%;
+    padding: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+    justify-content: center;
+  }
 
-    .innerColumnFooter12 {
-        min-width: 100%;
-        padding: 10px;
-        margin-left: 60px;
-        margin-right: 60px;
-        justify-content: center;
-    }
+  .innerColumnFooter21 {
+    min-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: center;
+  }
 
-    .innerColumnFooter21 {
-        min-width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 5px;
-        padding-right: 5px;
-        margin-left: 10px;
-        margin-right: 10px;
-        justify-content: center;
-    }
+  .innerColumnFooter22 {
+    min-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 60px;
+    margin-right: 60px;
+    justify-content: center;
+  }
 
-    .innerColumnFooter22 {
-        min-width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 5px;
-        padding-right: 5px;
-        margin-left: 60px;
-        margin-right: 60px;
-        justify-content: center;
-    }
+  .wrapperDeveloped {
+    margin-top: 10px;
+  }
 
-    .wrapperDeveloped {
-        margin-top: 10px;
-    }
-
-    .danfrunzaIcon {
-        height: 1rem;
-        width: 1rem;
-    }
+  .danfrunzaIcon {
+    height: 1rem;
+    width: 1rem;
+  }
 }

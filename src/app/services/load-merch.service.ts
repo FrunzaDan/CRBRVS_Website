@@ -18,7 +18,7 @@ export class LoadMerchService {
       catchError((): Observable<MerchItem[]> => {
         console.error('Failed to load merch data.');
         return of<MerchItem[]>([]);
-      })
+      }),
     );
   }
 }

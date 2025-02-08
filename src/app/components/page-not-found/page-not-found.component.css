@@ -1,20 +1,25 @@
 #background-image-404 {
-    background-image: linear-gradient(-45deg, rgba(1, 92, 87, 0.6), rgba(255, 55, 120, 0.6)), url(../../../assets/images/crbrvs7.webp);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100dvw;
-    min-height: 100dvh;
-    -webkit-background-position: center;
-    -moz-background-position: center;
-    background-position: center;
-    -webkit-background-repeat: no-repeat;
-    -moz-background-repeat: no-repeat;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-image: linear-gradient(
+      -45deg,
+      rgba(1, 92, 87, 0.6),
+      rgba(255, 55, 120, 0.6)
+    ),
+    url(../../../assets/images/crbrvs7.webp);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  min-height: 100dvh;
+  -webkit-background-position: center;
+  -moz-background-position: center;
+  background-position: center;
+  -webkit-background-repeat: no-repeat;
+  -moz-background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

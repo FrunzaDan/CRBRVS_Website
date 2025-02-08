@@ -18,7 +18,7 @@ export class LoadMusicService {
       catchError((): Observable<Song[]> => {
         console.error('Failed to load music data.');
         return of<Song[]>([]);
-      })
+      }),
     );
   }
 }

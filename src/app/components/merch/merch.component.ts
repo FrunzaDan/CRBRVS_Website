@@ -1,10 +1,9 @@
-
 import {
   Component,
   ElementRef,
   OnDestroy,
   OnInit,
-  viewChild
+  viewChild,
 } from '@angular/core';
 import { Subscription } from 'rxjs/internal/Subscription';
 import { take } from 'rxjs/internal/operators/take';
@@ -15,11 +14,11 @@ import { ScrollerService } from '../../services/scroller.service';
 import { SubscriptionService } from '../../services/subscription.service';
 
 @Component({
-    selector: 'app-merch',
-    imports: [],
-    templateUrl: './merch.component.html',
-    styleUrl: './merch.component.css',
-    animations: [transformIn, transformOut, fadeIn, fadeOut]
+  selector: 'app-merch',
+  imports: [],
+  templateUrl: './merch.component.html',
+  styleUrl: './merch.component.css',
+  animations: [transformIn, transformOut, fadeIn, fadeOut],
 })
 export class MerchComponent implements OnInit, OnDestroy {
   readonly merchScrollContainer = viewChild<ElementRef>('merchScrollContainer');
@@ -34,7 +33,7 @@ export class MerchComponent implements OnInit, OnDestroy {
   constructor(
     private loadMerchService: LoadMerchService,
     public scrollerService: ScrollerService,
-    private subscriptionService: SubscriptionService
+    private subscriptionService: SubscriptionService,
   ) {}
 
   ngOnInit(): void {
@@ -57,18 +56,14 @@ export class MerchComponent implements OnInit, OnDestroy {
   scrollLeft(): void {
     const merchScrollContainer = this.merchScrollContainer();
     if (merchScrollContainer) {
-      this.scrollerService.scrollToLeft(
-        merchScrollContainer.nativeElement
-      );
+      this.scrollerService.scrollToLeft(merchScrollContainer.nativeElement);
     }
   }
 
   scrollRight(end: boolean = false): void {
     const merchScrollContainer = this.merchScrollContainer();
     if (merchScrollContainer) {
-      this.scrollerService.scrollToRight(
-        merchScrollContainer.nativeElement
-      );
+      this.scrollerService.scrollToRight(merchScrollContainer.nativeElement);
     }
   }
   openMerchItemModal(merchItem: MerchItem): void {

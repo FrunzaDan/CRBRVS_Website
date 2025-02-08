@@ -1,38 +1,67 @@
 <div class="navbar-wrapper">
-    <nav class="navbar navbar-expand-sm navbar-custom-style" id="navbar-id">
-        <img (click)="scrollToSection('music')" class="nav-logo hover-item" src="../../../assets/images/crbrvs_logo.svg"
-            alt="CRBRVS Logo">
+  <nav class="navbar navbar-expand-sm navbar-custom-style" id="navbar-id">
+    <img
+      (click)="scrollToSection('music')"
+      class="nav-logo hover-item"
+      src="../../../assets/images/crbrvs_logo.svg"
+      alt="CRBRVS Logo"
+    />
 
-        <div class="navbar-toggler collapsed border-0" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span> </span>
-            <span> </span>
-            <span> </span>
-        </div>
-
-        <div class="collapse navbar-collapse justify-content-end align-center" id="navbarSupportedContent">
-            <ul class="navbar-nav custom-nav-list">
-                <li class="nav-item">
-                    <a href="#music" class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
-                        (click)="scrollToSection('music')">Music</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#merch" class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
-                        (click)="scrollToSection('merch')">Merch</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
-                        (click)="scrollToSection('contact')">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div id="background-image-header">
-        <div class="hero-label">
-            <div class="headline-intro-text">
-                Redefining rap.
-            </div>
-        </div>
+    <div
+      class="navbar-toggler collapsed border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span> </span>
+      <span> </span>
+      <span> </span>
     </div>
+
+    <div
+      class="collapse navbar-collapse justify-content-end align-center"
+      id="navbarSupportedContent"
+    >
+      <ul class="navbar-nav custom-nav-list">
+        <li class="nav-item">
+          <a
+            href="#music"
+            class="nav-link"
+            data-bs-toggle="collapse"
+            data-bs-target=".navbar-collapse.show"
+            (click)="scrollToSection('music')"
+            >Music</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="#merch"
+            class="nav-link"
+            data-bs-toggle="collapse"
+            data-bs-target=".navbar-collapse.show"
+            (click)="scrollToSection('merch')"
+            >Merch</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="#contact"
+            class="nav-link"
+            data-bs-toggle="collapse"
+            data-bs-target=".navbar-collapse.show"
+            (click)="scrollToSection('contact')"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div id="background-image-header">
+    <div class="hero-label">
+      <div class="headline-intro-text">Redefining rap.</div>
+    </div>
+  </div>
 </div>

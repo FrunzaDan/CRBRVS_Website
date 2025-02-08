@@ -3,15 +3,15 @@ import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
-    selector: 'app-navbar',
-    imports: [RouterModule],
-    templateUrl: './navbar.component.html',
-    styleUrl: './navbar.component.css'
+  selector: 'app-navbar',
+  imports: [RouterModule],
+  templateUrl: './navbar.component.html',
+  styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
   constructor(
     private viewportScroller: ViewportScroller,
-    private router: Router
+    private router: Router,
   ) {}
 
   public scrollToSection(elementId: string): void {
