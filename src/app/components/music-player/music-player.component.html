@@ -1,28 +1,61 @@
 @if (currentSong) {
-  <div class="music-player">
-    <img class="artwork" src="{{ currentSong.artwork }}" alt="CRBRVS Artwork">
-    <div class="song-info">
-      {{ currentSong.title }}
-    </div>
-    <div class="song-info">
-      {{ currentIndex + 1 }}/{{ songs.length }}
-    </div>
-    <div class="progress-bar">
-      <progress [value]="currentTime" max="{{ currentAudioDuration || 0 }}"
-      [attr.aria-valuemax]="currentAudioDuration || 0" class="custom-progress"> </progress>
-      <div class="row d-flex justify-content-between width-100">
-        <div class="col-6 d-flex justify-content-start">{{ formatTime(currentTime) }}s</div>
-        <div class="col-6 d-flex justify-content-end">{{currentAudioDuration}}s</div>
-      </div>
-    </div>
-    <div class="player-controls">
-      <button class="player-controls-btn" (click)="playPreviousSong()"><span
-      class="player-action-icon action-btn-backward"></span></button>
-      <button class="player-controls-btn" (click)="playStopSong()">
-        <span class="player-action-icon action-btn-{{ isPlaying ? 'stop' : 'play' }}"></span>
-      </button>
-      <button class="player-controls-btn" (click)="playNextSong()"><span
-      class="player-action-icon action-btn-forward"></span></button>
+<div class="music-player">
+  <img
+    class="artwork"
+    [src]="currentSong.artwork"
+    [alt]="currentSong.title + ' Artwork'"
+  />
+
+  <div class="song-info">
+    {{ currentSong.title }}
+  </div>
+
+  <div class="song-info">
+    {{ (currentIndex$ | async)! + 1 }}/{{ songs.length }}
+  </div>
+
+  <div class="progress-bar">
+    <progress
+      [value]="(currentTime$ | async) || 0"
+      [max]="(currentAudioDuration$ | async) || 0"
+      [attr.aria-valuemax]="(currentAudioDuration$ | async) || 0"
+      class="custom-progress"
+    ></progress>
+
+    <div class="time-display">
+      <span>{{ formatTime((currentTime$ | async) || 0) }}</span>
+      <span>{{ formatTime((currentAudioDuration$ | async) || 0) }}</span>
     </div>
   </div>
+
+  <div class="player-controls">
+    <button
+      class="player-controls-btn"
+      (click)="playPreviousSong()"
+      [attr.aria-label]="'Previous song'"
+    >
+      <span class="player-action-icon action-btn-backward"></span>
+    </button>
+
+    <button
+      class="player-controls-btn"
+      (click)="playStopSong()"
+      [attr.aria-label]="(isPlaying$ | async) ? 'Stop' : 'Play'"
+    >
+      <span
+        class="player-action-icon"
+        [class.action-btn-stop]="isPlaying$ | async"
+        [class.action-btn-play]="!(isPlaying$ | async)"
+      ></span>
+    </button>
+
+    <button
+      class="player-controls-btn"
+      (click)="playNextSong()"
+      [attr.aria-label]="'Next song'"
+    >
+      <span class="player-action-icon action-btn-forward"></span>
+    </button>
+  </div>
+</div>
 }

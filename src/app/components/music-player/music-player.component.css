@@ -1,79 +1,107 @@
 .music-player {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    border-radius: 1rem;
-    background-color: var(--main-light-color);
-    border: 0.2rem solid var(--main-second-color);
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--main-light-color);
+  border: 0.2rem solid var(--main-second-color);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .artwork {
-    width: 14rem;
-    border-radius: 1rem;
-    border: 0.2rem solid var(--main-second-color);
-    margin-top: 0.2rem;
-    margin-bottom: 0.6rem;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 1rem;
+  border: 0.2rem solid var(--main-second-color);
+  margin: 0.2rem 0 0.6rem;
+  object-fit: cover;
 }
 
 .player-controls {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 200px;
+  margin-top: 1rem;
 }
 
 .action-btn-play {
-    background-image: url(../../../assets/MusicPlayer/play-button-svgrepo-com.svg);
+  background-image: url(../../../assets/MusicPlayer/play-button-svgrepo-com.svg);
 }
 
 .action-btn-stop {
-    background-image: url(../../../assets/MusicPlayer/stop-button-svgrepo-com.svg);
+  background-image: url(../../../assets/MusicPlayer/stop-button-svgrepo-com.svg);
 }
 
 .progress-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--main-first-color);
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
 }
 
 .song-info {
-    color: var(--main-first-color);
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
+  color: var(--main-first-color);
+  margin: 0.4rem 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--main-first-color);
+  font-size: 0.875rem;
 }
 
 progress[value] {
-    --color: var(--main-second-color);
-    --background: var(--main-first-color);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    border-radius: 0.5rem;
-    border: 0.1rem solid var(--main-first-color);
-    background: var(--background);
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
-    width: 100%;
+  --color: var(--main-second-color);
+  --background: var(--main-first-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--background);
 }
 
 progress[value]::-webkit-progress-bar {
-    border-radius: 0.5rem;
-
-    background: var(--background);
+  background-color: var(--background);
+  border-radius: 0.5rem;
 }
 
 progress[value]::-webkit-progress-value {
-    border-radius: 0.5rem;
-    background: var(--color);
+  background-color: var(--color);
+  border-radius: 0.5rem;
+  transition: width 0.1s ease;
 }
 
 progress[value]::-moz-progress-bar {
-    border-radius: 0.5rem;
-    background: var(--color);
+  background-color: var(--color);
+  border-radius: 0.5rem;
+  transition: width 0.1s ease;
+}
+
+.player-controls-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.player-controls-btn:hover {
+  transform: scale(1.1);
+}
+
+.player-controls-btn:active {
+  transform: scale(0.95);
 }
