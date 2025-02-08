@@ -11,8 +11,16 @@
       "prefix": "app",
       "architect": {
         "build": {
+          "defaultConfiguration": "production",
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "optimization": {
+              "styles": true,
+              "fonts": true
+            },
+            "aot": true,
+            "sourceMap": false,
+            "namedChunks": false,
             "outputPath": "dist/crbrvs-website",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -41,7 +49,14 @@
           },
           "configurations": {
             "production": {
-              "optimization": true,
+              "baseHref": "/",
+              "optimization": {
+                "scripts": true,
+                "styles": true,
+                "fonts": true
+              },
+              "outputHashing": "all",
+              "sourceMap": false,
               "budgets": [
                 {
                   "type": "initial",
@@ -54,15 +69,20 @@
                   "maximumError": "8kb"
                 }
               ],
-              "outputHashing": "all"
+              "subresourceIntegrity": true
             },
             "development": {
-              "optimization": true,
+              "baseHref": "/",
+              "optimization": {
+                "scripts": true,
+                "styles": true,
+                "fonts": true
+              },
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "namedChunks": true
             }
-          },
-          "defaultConfiguration": "production"
+          }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",

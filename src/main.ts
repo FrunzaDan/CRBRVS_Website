@@ -6,8 +6,11 @@ import { AppComponent } from './app/app.component';
 import { appConfig } from './app/app.config';
 
 bootstrapApplication(AppComponent, appConfig).catch((err) =>
-  console.error(err)
+  console.error(err),
 );
 
 const app = initializeApp(environment.firebaseConfig);
-const analytics = getAnalytics(app);
+
+if (typeof window !== 'undefined') {
+  getAnalytics(app);
+}
