@@ -22,12 +22,12 @@ export class MusicPlayerComponent implements OnInit, OnDestroy {
   constructor(private loadMusicService: LoadMusicService) {}
 
   ngOnInit(): void {
-    this.loadMusicService.loadMusic().subscribe((response: Song[]) => {
-      this.songs.set(response);
-      if (response.length > 0) {
-        this.initializeFirstSong();
-      }
-    });
+    const loadedSongs = this.loadMusicService.loadMusic();
+    this.songs.set(loadedSongs);
+
+    if (loadedSongs.length > 0) {
+      this.initializeFirstSong();
+    }
   }
 
   ngOnDestroy() {
