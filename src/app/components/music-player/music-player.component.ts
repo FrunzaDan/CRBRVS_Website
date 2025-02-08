@@ -1,67 +1,53 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { AsyncPipe } from '@angular/common';
-import { BehaviorSubject, Subject, interval } from 'rxjs';
-import { takeUntil, take } from 'rxjs/operators';
+import { Component, OnDestroy, OnInit, signal } from '@angular/core';
 import { Song } from '../../interfaces/song';
 import { LoadMusicService } from '../../services/load-music.service';
-import { SubscriptionService } from '../../services/subscription.service';
 
 @Component({
   selector: 'app-music-player',
   standalone: true,
-  imports: [AsyncPipe],
   templateUrl: './music-player.component.html',
   styleUrl: './music-player.component.css',
 })
 export class MusicPlayerComponent implements OnInit, OnDestroy {
-  songs: Song[] = [];
-  currentSong: Song | null = null;
-  isPlaying$ = new BehaviorSubject<boolean>(false);
-  currentTime$ = new BehaviorSubject<number>(0);
-  currentAudioDuration$ = new BehaviorSubject<number>(0);
-  currentIndex$ = new BehaviorSubject<number>(0);
+  songs = signal<Song[]>([]);
+  currentSong = signal<Song | null>(null);
+  isPlaying = signal<boolean>(false);
+  currentTime = signal<number>(0);
+  currentAudioDuration = signal<number>(0);
+  currentIndex = signal<number>(0);
 
-  private destroy$ = new Subject<void>();
   private audio: HTMLAudioElement | null = null;
-  private progressInterval: any;
+  private progressInterval: number | null = null;
 
-  constructor(
-    private loadMusicService: LoadMusicService,
-    private subscriptionService: SubscriptionService,
-  ) {}
+  constructor(private loadMusicService: LoadMusicService) {}
 
   ngOnInit(): void {
-    this.loadMusicService
-      .loadMusic()
-      .pipe(take(1))
-      .subscribe((response: Song[]) => {
-        this.songs = response;
-        if (this.songs.length > 0) {
-          this.initializeFirstSong();
-        }
-      });
+    this.loadMusicService.loadMusic().subscribe((response: Song[]) => {
+      this.songs.set(response);
+      if (response.length > 0) {
+        this.initializeFirstSong();
+      }
+    });
   }
 
   ngOnDestroy() {
-    this.destroy$.next();
-    this.destroy$.complete();
     this.cleanup();
   }
 
   private initializeFirstSong(): void {
-    this.currentSong = this.songs[0];
-    this.currentIndex$.next(0);
+    this.currentSong.set(this.songs()[0]);
+    this.currentIndex.set(0);
     this.initializeAudio();
   }
 
   private initializeAudio(): void {
-    if (typeof window !== 'undefined' && this.currentSong) {
+    if (typeof window !== 'undefined' && this.currentSong()) {
       this.cleanup(); // Clean up previous audio instance
-      this.audio = new Audio(this.currentSong.src);
+      this.audio = new Audio(this.currentSong()!.src);
 
       this.audio.addEventListener('loadedmetadata', () => {
         if (this.audio) {
-          this.currentAudioDuration$.next(Math.ceil(this.audio.duration));
+          this.currentAudioDuration.set(Math.ceil(this.audio.duration));
         }
       });
 
@@ -71,13 +57,13 @@ export class MusicPlayerComponent implements OnInit, OnDestroy {
 
       this.audio.addEventListener('error', (e) => {
         console.error('Audio loading error:', e);
-        this.isPlaying$.next(false);
+        this.isPlaying.set(false);
       });
     }
   }
 
   playStopSong(): void {
-    if (!this.currentSong || !this.audio) return;
+    if (!this.currentSong() || !this.audio) return;
 
     if (this.audio.paused) {
       this.startPlayback();
@@ -92,12 +78,12 @@ export class MusicPlayerComponent implements OnInit, OnDestroy {
     this.audio
       .play()
       .then(() => {
-        this.isPlaying$.next(true);
+        this.isPlaying.set(true);
         this.startProgressTracking();
       })
       .catch((error) => {
         console.error('Audio playback error:', error);
-        this.isPlaying$.next(false);
+        this.isPlaying.set(false);
       });
   }
 
@@ -105,50 +91,49 @@ export class MusicPlayerComponent implements OnInit, OnDestroy {
     if (!this.audio) return;
 
     this.audio.pause();
-    this.isPlaying$.next(false);
+    this.isPlaying.set(false);
     this.stopProgressTracking();
-    this.currentTime$.next(0);
+    this.currentTime.set(0);
     this.audio.currentTime = 0;
   }
 
   private startProgressTracking(): void {
     this.stopProgressTracking(); // Clear any existing interval
 
-    this.progressInterval = interval(100)
-      .pipe(takeUntil(this.destroy$))
-      .subscribe(() => {
-        if (this.audio && !this.audio.paused) {
-          this.currentTime$.next(this.audio.currentTime);
+    this.progressInterval = window.setInterval(() => {
+      if (this.audio && !this.audio.paused) {
+        this.currentTime.set(this.audio.currentTime);
 
-          // Check if song has ended
-          if (this.audio.currentTime >= this.audio.duration) {
-            this.playNextSong();
-          }
+        // Check if song has ended
+        if (this.audio.currentTime >= this.audio.duration) {
+          this.playNextSong();
         }
-      });
+      }
+    }, 100);
   }
 
   private stopProgressTracking(): void {
-    if (this.progressInterval) {
-      this.progressInterval.unsubscribe();
+    if (this.progressInterval !== null) {
+      window.clearInterval(this.progressInterval);
+      this.progressInterval = null;
     }
   }
 
   playNextSong(): void {
-    const nextIndex = (this.currentIndex$.value + 1) % this.songs.length;
+    const nextIndex = (this.currentIndex() + 1) % this.songs().length;
     this.changeSong(nextIndex);
   }
 
   playPreviousSong(): void {
     const prevIndex =
-      (this.currentIndex$.value - 1 + this.songs.length) % this.songs.length;
+      (this.currentIndex() - 1 + this.songs().length) % this.songs().length;
     this.changeSong(prevIndex);
   }
 
   private changeSong(newIndex: number): void {
     this.stopPlayback();
-    this.currentIndex$.next(newIndex);
-    this.currentSong = this.songs[newIndex];
+    this.currentIndex.set(newIndex);
+    this.currentSong.set(this.songs()[newIndex]);
     this.initializeAudio();
     this.startPlayback();
   }

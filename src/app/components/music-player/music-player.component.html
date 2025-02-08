@@ -1,30 +1,28 @@
-@if (currentSong) {
+@if (currentSong()) {
 <div class="music-player">
   <img
     class="artwork"
-    [src]="currentSong.artwork"
-    [alt]="currentSong.title + ' Artwork'"
+    [src]="currentSong()!.artwork"
+    [alt]="currentSong()!.title + ' Artwork'"
   />
 
   <div class="song-info">
-    {{ currentSong.title }}
+    {{ currentSong()!.title }}
   </div>
 
-  <div class="song-info">
-    {{ (currentIndex$ | async)! + 1 }}/{{ songs.length }}
-  </div>
+  <div class="song-info">{{ currentIndex() + 1 }}/{{ songs().length }}</div>
 
   <div class="progress-bar">
     <progress
-      [value]="(currentTime$ | async) || 0"
-      [max]="(currentAudioDuration$ | async) || 0"
-      [attr.aria-valuemax]="(currentAudioDuration$ | async) || 0"
+      [value]="currentTime()"
+      [max]="currentAudioDuration()"
+      [attr.aria-valuemax]="currentAudioDuration()"
       class="custom-progress"
     ></progress>
 
     <div class="time-display">
-      <span>{{ formatTime((currentTime$ | async) || 0) }}</span>
-      <span>{{ formatTime((currentAudioDuration$ | async) || 0) }}</span>
+      <span>{{ formatTime(currentTime()) }}</span>
+      <span>{{ formatTime(currentAudioDuration()) }}</span>
     </div>
   </div>
 
@@ -32,7 +30,7 @@
     <button
       class="player-controls-btn"
       (click)="playPreviousSong()"
-      [attr.aria-label]="'Previous song'"
+      aria-label="Previous song"
     >
       <span class="player-action-icon action-btn-backward"></span>
     </button>
@@ -40,19 +38,19 @@
     <button
       class="player-controls-btn"
       (click)="playStopSong()"
-      [attr.aria-label]="(isPlaying$ | async) ? 'Stop' : 'Play'"
+      [attr.aria-label]="isPlaying() ? 'Stop' : 'Play'"
     >
       <span
         class="player-action-icon"
-        [class.action-btn-stop]="isPlaying$ | async"
-        [class.action-btn-play]="!(isPlaying$ | async)"
+        [class.action-btn-stop]="isPlaying()"
+        [class.action-btn-play]="!isPlaying()"
       ></span>
     </button>
 
     <button
       class="player-controls-btn"
       (click)="playNextSong()"
-      [attr.aria-label]="'Next song'"
+      aria-label="Next song"
     >
       <span class="player-action-icon action-btn-forward"></span>
     </button>
