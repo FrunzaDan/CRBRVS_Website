@@ -6,6 +6,7 @@
       <div class="rectangle-front"></div>
     </div>
   </div>
+
   <div class="row p-2">
     <div class="col d-flex justify-content-center align-items-center pb-4">
       <div class="text-style-1">
@@ -13,14 +14,15 @@
       </div>
     </div>
   </div>
+
   <div class="row px-2">
     <div class="col d-flex justify-content-center align-items-center">
       <div id="horizontal-scroll-container" #merchScrollContainer>
-        @for (merchItem of merchItems; track merchItem) {
+        @for (merchItem of merchItems(); track merchItem.title) {
         <div class="merch-card hover-card">
           <img
             class="merch-img"
-            src="{{ merchItem.src }}"
+            [src]="merchItem.src"
             alt="CRBRVS merch item"
           />
           <div class="p-2">
@@ -35,6 +37,7 @@
       </div>
     </div>
   </div>
+
   <div class="row px-2">
     <div class="col d-flex justify-content-center align-items-center pb-4">
       <button class="player-controls-btn" (click)="scrollLeft()">
@@ -47,41 +50,42 @@
   </div>
 </div>
 
-@if (isMerchModalOpen) {
+@if (isMerchModalOpen()) {
 <div
   class="full-view-background"
   @fadeIn
   @fadeOut
   (click)="closeMerchItemModal()"
 ></div>
-} @if (isMerchModalOpen) {
+
 <div class="get-merch-modal" @transformIn @transformOut>
   <div class="customModal-header">
-    <h1>What's this {{ selectedMerchItem?.title }}?</h1>
+    <h1>What's this {{ selectedMerchItem()?.title }}?</h1>
     <button (click)="closeMerchItemModal()" class="close-button">
       &times;
     </button>
   </div>
+
   <div class="container-fluid">
     <div class="row p-2 d-flex justify-content-center align-items-center">
       <img
         class="merch-img-full"
-        src="{{ selectedMerchItem?.src }}"
+        [src]="selectedMerchItem()?.src"
         alt="CRBRVS merch item"
       />
     </div>
+
     <div class="row p-2">
-      <p>Description: {{ selectedMerchItem?.description }}</p>
-      <p>Price: {{ selectedMerchItem?.price }} RON</p>
-      <p>Interesetd in this merch?</p>
+      <p>Description: {{ selectedMerchItem()?.description }}</p>
+      <p>Price: {{ selectedMerchItem()?.price }} RON</p>
+      <p>Interested in this merch?</p>
     </div>
+
     <div class="row p-2">
       <div class="col-sm-6 py-2">
         <a class="fullSpaceHref" href="tel:+40744210017">
           <button class="width-100">
-            <span>
-              <i class="bi bi-telephone white-icon"></i>
-            </span>
+            <span><i class="bi bi-telephone white-icon"></i></span>
             <span class="ms-2"> Call me </span>
           </button>
         </a>
@@ -89,14 +93,13 @@
       <div class="col-sm-6 py-2">
         <a class="fullSpaceHref" href="mailto:crbrvsraps@gmail.com">
           <button class="width-100">
-            <span>
-              <i class="bi bi-envelope white-icon"></i>
-            </span>
+            <span><i class="bi bi-envelope white-icon"></i></span>
             <span class="ms-2"> E-mail me </span>
           </button>
         </a>
       </div>
     </div>
+
     <div class="row p-2">
       <p>
         *Payment is only by cash on delivery after contacting me to confirm

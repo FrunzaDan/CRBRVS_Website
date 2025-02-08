@@ -3,54 +3,38 @@ import {
   ElementRef,
   OnDestroy,
   OnInit,
+  Signal,
+  effect,
+  signal,
   viewChild,
 } from '@angular/core';
-import { Subscription } from 'rxjs/internal/Subscription';
-import { take } from 'rxjs/internal/operators/take';
+import { take } from 'rxjs/operators';
 import { fadeIn, fadeOut, transformIn, transformOut } from '../../animations';
 import { MerchItem } from '../../interfaces/merch-item';
 import { LoadMerchService } from '../../services/load-merch.service';
 import { ScrollerService } from '../../services/scroller.service';
-import { SubscriptionService } from '../../services/subscription.service';
 
 @Component({
   selector: 'app-merch',
-  imports: [],
   templateUrl: './merch.component.html',
   styleUrl: './merch.component.css',
   animations: [transformIn, transformOut, fadeIn, fadeOut],
 })
-export class MerchComponent implements OnInit, OnDestroy {
+export class MerchComponent implements OnInit {
   readonly merchScrollContainer = viewChild<ElementRef>('merchScrollContainer');
-  merchItems: MerchItem[] = [];
-  selectedMerchItem: MerchItem | undefined;
-  isMerchModalOpen: boolean = false;
-  merchItemModalTitle!: string;
-  merchItemModalDescription!: string;
-  merchItemModalPrice!: string;
-  private merchSubscription?: Subscription;
+
+  merchItems = signal<MerchItem[]>([]);
+  selectedMerchItem = signal<MerchItem | null>(null);
+  isMerchModalOpen = signal<boolean>(false);
 
   constructor(
     private loadMerchService: LoadMerchService,
     public scrollerService: ScrollerService,
-    private subscriptionService: SubscriptionService,
   ) {}
 
   ngOnInit(): void {
-    this.loadMerchOnce();
-  }
-
-  ngOnDestroy(): void {
-    this.subscriptionService.unsubscribeIfActive(this.merchSubscription);
-  }
-
-  private loadMerchOnce(): void {
-    this.merchSubscription = this.loadMerchService
-      .loadMerch()
-      .pipe(take(1))
-      .subscribe((response: MerchItem[]): void => {
-        this.merchItems = response;
-      });
+    const loadedSongs = this.loadMerchService.loadMerch();
+    this.merchItems.set(loadedSongs);
   }
 
   scrollLeft(): void {
@@ -60,21 +44,20 @@ export class MerchComponent implements OnInit, OnDestroy {
     }
   }
 
-  scrollRight(end: boolean = false): void {
+  scrollRight(): void {
     const merchScrollContainer = this.merchScrollContainer();
     if (merchScrollContainer) {
       this.scrollerService.scrollToRight(merchScrollContainer.nativeElement);
     }
   }
+
   openMerchItemModal(merchItem: MerchItem): void {
-    if (merchItem) {
-      this.isMerchModalOpen = true;
-      this.selectedMerchItem = merchItem;
-    }
+    this.isMerchModalOpen.set(true);
+    this.selectedMerchItem.set(merchItem);
   }
 
   closeMerchItemModal(): void {
-    this.isMerchModalOpen = false;
-    this.selectedMerchItem = undefined;
+    this.isMerchModalOpen.set(false);
+    this.selectedMerchItem.set(null);
   }
 }

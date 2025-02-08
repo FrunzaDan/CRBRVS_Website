@@ -1,6 +1,6 @@
 export interface MerchItem {
   title: string;
-  price: string;
+  price: number;
   src: string;
   description: string;
 }
