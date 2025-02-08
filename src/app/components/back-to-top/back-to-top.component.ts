@@ -5,13 +5,13 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { CommonModule } from '@angular/common';
+
 import { Component, HostListener } from '@angular/core';
 import { ScrollerService } from '../../services/scroller.service';
 
 @Component({
     selector: 'app-back-to-top',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './back-to-top.component.html',
     styleUrl: './back-to-top.component.css',
     animations: [

@@ -1,96 +1,112 @@
 <div class="container-fluid p-2" id="background-image-contact">
-    <div class="row p-2">
-        <div class="section-title">
-            <div class="rectangle-back"></div>
-            <div class="section-title-intro-text">
-                Contact.
-            </div>
-            <div class="rectangle-front"></div>
-        </div>
+  <div class="row p-2">
+    <div class="section-title">
+      <div class="rectangle-back"></div>
+      <div class="section-title-intro-text">
+        Contact.
+      </div>
+      <div class="rectangle-front"></div>
     </div>
-    <div class="row p-2">
-        <div class="col d-flex justify-content-center align-items-center text-center">
-            <div class="text-style-1">
-                Wanna get in touch? Don't hesitate!
-            </div>
-        </div>
+  </div>
+  <div class="row p-2">
+    <div class="col d-flex justify-content-center align-items-center text-center">
+      <div class="text-style-1">
+        Wanna get in touch? Don't hesitate!
+      </div>
     </div>
-    <div class="row p-2">
-        <div class="col-md-7 col-sm-7 p-3">
-            <div class="card contact-card hover-card">
-                <div class="contact-info">
-                    <div class="contact-info-entry">
-                        <p class="contact-card-text">Contact Info:</p>
-                    </div>
-                    <div class="contact-info-entry">
-                        <i class="bi bi-envelope contact-card-icons me-2"></i><span
-                            class=" contact-card-text">E-mail:</span><br>
-                        <a href="mailto:crbrvsraps@gmail.com" class="contact-card-text">crbrvsraps&#64;gmail.com</a>
-                    </div>
-                    <div class="contact-info-entry">
-                        <i class="bi bi-telephone contact-card-icons me-2"></i><span
-                            class=" contact-card-text">Phone:</span><br>
-                        <a href="tel:+40744210017" class="contact-card-text">+40744210017</a>
-                    </div>
-                    <div class="contact-info-entry">
-                        <i class="bi bi-facebook contact-card-icons me-2"></i><span
-                            class=" contact-card-text">Facebook:</span><br>
-                        <a href="https://www.facebook.com/CRBRVS/" class="contact-card-text" aria-label="Facebook"
-                            target="_blank" rel="noopener noreferrer">facebook.com/CRBRVS</a>
-                    </div>
-                    <div class="contact-info-entry">
-                        <i class="bi bi-instagram contact-card-icons me-2"></i><span
-                            class="contact-card-text">Instagram:</span><br>
+  </div>
+  <div class="row p-2">
+    <div class="col-md-7 col-sm-7 p-3">
+      <div class="card contact-card hover-card">
+        <div class="contact-info">
+          <div class="contact-info-entry">
+            <p class="contact-card-text">Contact Info:</p>
+          </div>
+          <div class="contact-info-entry">
+            <i class="bi bi-envelope contact-card-icons me-2"></i><span
+          class=" contact-card-text">E-mail:</span><br>
+          <a href="mailto:crbrvsraps@gmail.com" class="contact-card-text">crbrvsraps&#64;gmail.com</a>
+        </div>
+        <div class="contact-info-entry">
+          <i class="bi bi-telephone contact-card-icons me-2"></i><span
+        class=" contact-card-text">Phone:</span><br>
+        <a href="tel:+40744210017" class="contact-card-text">+40744210017</a>
+      </div>
+      <div class="contact-info-entry">
+        <i class="bi bi-facebook contact-card-icons me-2"></i><span
+      class=" contact-card-text">Facebook:</span><br>
+      <a href="https://www.facebook.com/CRBRVS/" class="contact-card-text" aria-label="Facebook"
+      target="_blank" rel="noopener noreferrer">facebook.com/CRBRVS</a>
+    </div>
+    <div class="contact-info-entry">
+      <i class="bi bi-instagram contact-card-icons me-2"></i><span
+    class="contact-card-text">Instagram:</span><br>
 
-                        <a href="https://www.instagram.com/_crbrvs/" class="contact-card-text" aria-label="Instagram"
-                            target="_blank" rel="noopener noreferrer">instagram.com/_crbrvs</a>
+    <a href="https://www.instagram.com/_crbrvs/" class="contact-card-text" aria-label="Instagram"
+    target="_blank" rel="noopener noreferrer">instagram.com/_crbrvs</a>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-5 col-sm-5 p-3">
-            <div class="card contact-card hover-card">
-                <form [formGroup]="contactMeForm" #formDirective="ngForm" (ngSubmit)="onSubmit()">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Name:</label>
-                        <input class="form-control" formControlName="name" name="name" type="text"
-                            placeholder="Your name" autocomplete="on"
-                            [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
-                        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
-                            <div *ngIf="f['name'].errors['required']">Your name is required.</div>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">E-mail:</label>
-                        <input class="form-control" formControlName="email" name="email" type="email"
-                            placeholder="Your E-mail address" autocomplete="on"
-                            [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
-                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                            <div *ngIf="f['email'].errors['required']">Your E-mail is required.</div>
-                            <div *ngIf="f['email'].errors['email']">A valid E-mail is required.</div>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="from_message" class="form-label">Message:</label>
-                        <textarea class="form-control" formControlName="from_message" name="email" type="text"
-                            placeholder="Your message for me"
-                            [ngClass]="{ 'is-invalid': submitted && f.from_message.errors }"
-                            style="height: 10rem"></textarea>
-                        <div *ngIf="submitted && f.from_message.errors" class="invalid-feedback">
-                            <div *ngIf="f['from_message'].errors['required']">A message is required.</div>
-                        </div>
-                    </div>
-                    <div class="d-grid">
-                        <button class="width-100 my-2" type="submit">Send message!</button>
-                    </div>
-                </form>
-                <div class="send-email-modal" *ngIf="isEmailModalOpen" @transformIn @transformOut>
-                    <h2 id="email-popup-text-header">{{emailPopUpHeader}}</h2>
-                    <p id="email-popup-text-paragraph">{{emailPopUpParagraph}}</p>
-                    <button type="submit" class="width-100" (click)="closeEmailModal()">OK</button>
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="col-md-5 col-sm-5 p-3">
+  <div class="card contact-card hover-card">
+    <form [formGroup]="contactMeForm" #formDirective="ngForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input class="form-control" formControlName="name" name="name" type="text"
+          placeholder="Your name" autocomplete="on"
+          [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+        @if (submitted && f.name.errors) {
+          <div class="invalid-feedback">
+            @if (f['name'].errors['required']) {
+              <div>Your name is required.</div>
+            }
+          </div>
+        }
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail:</label>
+        <input class="form-control" formControlName="email" name="email" type="email"
+          placeholder="Your E-mail address" autocomplete="on"
+          [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+        @if (submitted && f.email.errors) {
+          <div class="invalid-feedback">
+            @if (f['email'].errors['required']) {
+              <div>Your E-mail is required.</div>
+            }
+            @if (f['email'].errors['email']) {
+              <div>A valid E-mail is required.</div>
+            }
+          </div>
+        }
+      </div>
+      <div class="mb-3">
+        <label for="from_message" class="form-label">Message:</label>
+        <textarea class="form-control" formControlName="from_message" name="email" type="text"
+          placeholder="Your message for me"
+          [ngClass]="{ 'is-invalid': submitted && f.from_message.errors }"
+        style="height: 10rem"></textarea>
+        @if (submitted && f.from_message.errors) {
+          <div class="invalid-feedback">
+            @if (f['from_message'].errors['required']) {
+              <div>A message is required.</div>
+            }
+          </div>
+        }
+      </div>
+      <div class="d-grid">
+        <button class="width-100 my-2" type="submit">Send message!</button>
+      </div>
+    </form>
+    @if (isEmailModalOpen) {
+      <div class="send-email-modal" @transformIn @transformOut>
+        <h2 id="email-popup-text-header">{{emailPopUpHeader}}</h2>
+        <p id="email-popup-text-paragraph">{{emailPopUpParagraph}}</p>
+        <button type="submit" class="width-100" (click)="closeEmailModal()">OK</button>
+      </div>
+    }
+  </div>
+</div>
+</div>
 </div>

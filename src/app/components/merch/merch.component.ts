@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import {
   Component,
   ElementRef,
@@ -16,7 +16,7 @@ import { SubscriptionService } from '../../services/subscription.service';
 
 @Component({
     selector: 'app-merch',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './merch.component.html',
     styleUrl: './merch.component.css',
     animations: [transformIn, transformOut, fadeIn, fadeOut]

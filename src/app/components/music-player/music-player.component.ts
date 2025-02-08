@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { take } from 'rxjs/internal/operators/take';
 import { Subscription } from 'rxjs/internal/Subscription';
@@ -8,7 +8,7 @@ import { SubscriptionService } from '../../services/subscription.service';
 
 @Component({
     selector: 'app-music-player',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './music-player.component.html',
     styleUrl: './music-player.component.css'
 })
