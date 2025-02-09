@@ -69,10 +69,6 @@ p {
   font-style: inherit;
 }
 
-.cursor-pointer {
-  cursor: pointer;
-}
-
 li {
   list-style: none;
 }
@@ -286,34 +282,6 @@ iframe {
   text-wrap: balance;
 }
 
-.hero-label {
-  display: flex;
-  position: absolute;
-  height: 46em;
-  width: 100%;
-  z-index: auto;
-}
-
-.width-100 {
-  width: 100%;
-}
-
-.headline-intro-text {
-  color: var(--main-light-color);
-  display: flex;
-  position: absolute;
-  top: 75%;
-  z-index: 3;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  margin: auto;
-  font-size: 6rem;
-  animation: mainGlow 4s linear infinite;
-  text-align: center;
-}
-
 .section-title-intro-text {
   font-family: var(--Bold-font);
   color: var(--main-light-color);
@@ -371,17 +339,9 @@ iframe {
   .text-style-1 {
     font-size: 2.6rem;
   }
-
-  .headline-intro-text {
-    font-size: 5.2rem;
-  }
 }
 
 @media only screen and (max-width: 576px) {
-  .headline-intro-text {
-    font-size: 4rem;
-  }
-
   .text-style-1 {
     font-size: 2.1rem;
   }
@@ -389,24 +349,23 @@ iframe {
 
 @keyframes mainGlow {
   0% {
-    color: hsl(230, 40%, 80%);
-    text-shadow: 0 0 1.5em hsla(320, 100%, 50%, 0.2),
-      0 0 0.125em hsla(320, 100%, 60%, 0.3),
-      2em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    color: rgb(163, 176, 230);
+    text-shadow: 0 0 1.5em rgba(255, 0, 127, 0.2),
+      0 0 0.125em rgba(255, 0, 153, 0.3), 2em 0.125em 0.5em rgba(0, 153, 255, 0);
   }
 
   50% {
-    color: hsl(230, 100%, 100%);
-    text-shadow: 0 0 1.5em hsla(320, 100%, 50%, 0.6),
-      0 0 0.125em hsla(320, 100%, 100%, 0.6),
-      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 1.5em rgba(255, 0, 127, 0.6),
+      0 0 0.125em rgba(255, 0, 255, 0.6),
+      0.25em 0.125em 0.125em rgba(0, 153, 255, 0.4);
   }
 
   100% {
-    color: hsl(230, 40%, 80%);
-    text-shadow: 0 0 1.5em hsla(320, 100%, 50%, 0.2),
-      0 0 0.125em hsla(320, 100%, 60%, 0.3),
-      -2em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    color: rgb(163, 176, 230);
+    text-shadow: 0 0 1.5em rgba(255, 0, 127, 0.2),
+      0 0 0.125em rgba(255, 0, 153, 0.3),
+      -2em 0.125em 0.5em rgba(0, 153, 255, 0);
   }
 }
 
