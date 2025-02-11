@@ -11,25 +11,36 @@ export class ScrollerService {
     this.viewportScroller.scrollToPosition([0, 0]);
   }
 
-  scrollToLeft(container: Element, offset: number = 400): void {
+  private scrollHorizontally(
+    container: Element | null,
+    offset: number,
+    direction: 'left' | 'right',
+  ): void {
     if (!container) {
       return;
     }
-    const currentScrollLeft: number = container.scrollLeft;
-    const newScrollLeft: number = Math.max(currentScrollLeft - offset, 0);
+
+    const { scrollWidth, clientWidth, scrollLeft } = container;
+    const maxScrollLeft = scrollWidth - clientWidth;
+    let newScrollLeft =
+      direction === 'left'
+        ? Math.max(scrollLeft - offset, 0)
+        : scrollLeft + offset;
+
+    newScrollLeft =
+      direction === 'left'
+        ? Math.max(newScrollLeft, 0)
+        : Math.min(newScrollLeft, maxScrollLeft);
+
     container.scrollTo({ behavior: 'smooth', left: newScrollLeft });
   }
 
-  scrollToRight(container: Element, offset: number = 400): void {
-    if (!container) {
-      return;
-    }
-    const containerWidth: number = container.scrollWidth;
-    const currentScrollLeft: number = container.scrollLeft;
-    const clientWidth: number = container.clientWidth;
-    const maxScrollLeft: number = containerWidth - clientWidth;
-    let newScrollLeft: number = currentScrollLeft + offset;
-    newScrollLeft = Math.min(newScrollLeft, maxScrollLeft);
-    container.scrollTo({ behavior: 'smooth', left: newScrollLeft });
+  scrollToLeft(container: Element | null, offset: number = 400): void {
+    this.scrollHorizontally(container, offset, 'left');
+  }
+
+  // Scroll to the right with optional offset (default: 400)
+  scrollToRight(container: Element | null, offset: number = 400): void {
+    this.scrollHorizontally(container, offset, 'right');
   }
 }

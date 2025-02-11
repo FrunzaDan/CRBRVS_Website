@@ -10,8 +10,7 @@ export class SendEmailService {
   constructor() {}
 
   sendEmailJS(contactMeForm: ContactMeForm): Promise<number> {
-    let responseCode: number = 500;
-    var params = {
+    const params = {
       name: contactMeForm.name,
       email: contactMeForm.email,
       from_message: contactMeForm.from_message,
@@ -25,13 +24,12 @@ export class SendEmailService {
         environment.emailJSConfig.publicKey,
       )
       .then(
-        (success: EmailJSResponseStatus): number => {
-          responseCode = success.status;
-          return responseCode;
+        (response: EmailJSResponseStatus) => {
+          return response.status;
         },
-        (error): number => {
-          responseCode = error.status;
-          return responseCode;
+        (error) => {
+          console.error('Error sending email:', error);
+          return 500;
         },
       );
   }
