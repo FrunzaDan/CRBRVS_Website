@@ -64,11 +64,7 @@
     </div>
     <div class="col-md-5 col-sm-5 p-3">
       <div class="card contact-card hover-card">
-        <form
-          [formGroup]="contactMeForm"
-          #formDirective="ngForm"
-          (ngSubmit)="onSubmit()"
-        >
+        <form [formGroup]="contactMeForm" (ngSubmit)="onSubmit()">
           <div class="mb-3">
             <label for="name" class="form-label">Name:</label>
             <input
@@ -78,11 +74,11 @@
               type="text"
               placeholder="Your name"
               autocomplete="on"
-              [ngClass]="{ 'is-invalid': submitted && f.name.errors }"
+              [class.is-invalid]="isNameInvalid"
             />
-            @if (submitted && f.name.errors) {
+            @if (isNameInvalid) {
             <div class="invalid-feedback">
-              @if (f['name'].errors['required']) {
+              @if (name?.errors?.['required']) {
               <div>Your name is required.</div>
               }
             </div>
@@ -97,13 +93,13 @@
               type="email"
               placeholder="Your E-mail address"
               autocomplete="on"
-              [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+              [class.is-invalid]="isEmailInvalid"
             />
-            @if (submitted && f.email.errors) {
+            @if (isEmailInvalid) {
             <div class="invalid-feedback">
-              @if (f['email'].errors['required']) {
+              @if (email?.errors?.['required']) {
               <div>Your E-mail is required.</div>
-              } @if (f['email'].errors['email']) {
+              } @if (email?.errors?.['email']) {
               <div>A valid E-mail is required.</div>
               }
             </div>
@@ -114,15 +110,15 @@
             <textarea
               class="form-control"
               formControlName="from_message"
-              name="email"
+              name="from_message"
               type="text"
               placeholder="Your message for me"
-              [ngClass]="{ 'is-invalid': submitted && f.from_message.errors }"
+              [class.is-invalid]="isMessageInvalid"
               style="height: 10rem"
             ></textarea>
-            @if (submitted && f.from_message.errors) {
+            @if (isMessageInvalid) {
             <div class="invalid-feedback">
-              @if (f['from_message'].errors['required']) {
+              @if (from_message?.errors?.['required']) {
               <div>A message is required.</div>
               }
             </div>
