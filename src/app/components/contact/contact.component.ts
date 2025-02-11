@@ -7,14 +7,13 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { transformIn, transformOut } from '../../animations';
 import { ContactMeForm } from '../../interfaces/contact-me-form';
 import { SendEmailService } from '../../services/send-email.service';
 
 @Component({
   selector: 'app-contact',
-  imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css',
   animations: [transformIn, transformOut],
