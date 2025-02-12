@@ -19,7 +19,6 @@
   border: 0.1px solid var(--main-second-color);
   text-align: center;
   pointer-events: auto;
-
   bottom: '1rem';
   right: '1rem';
 }

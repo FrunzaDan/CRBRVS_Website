@@ -144,6 +144,8 @@ input:focus {
     rgba(var(--main-third-color-for-alpha), 0.8),
     rgba(var(--main-second-color-for-alpha), 0.8)
   );
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 .pink-color {
@@ -167,15 +169,6 @@ input:focus {
 .card > p {
   padding-top: 6px;
   padding-bottom: 6px;
-}
-
-.card-footer {
-  text-align: center;
-  padding: 0.5rem;
-  font-size: 2rem;
-  text-shadow: -1px 0 var(--main-second-color), 0 1px var(--main-second-color),
-    1px 0 var(--main-second-color), 0 -1px var(--main-second-color);
-  color: var(--main-first-color);
 }
 
 .section-title {
@@ -325,10 +318,6 @@ iframe {
   .nav-link {
     font-size: 3rem;
   }
-
-  .section-name {
-    font-size: 6.25rem;
-  }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
@@ -350,22 +339,17 @@ iframe {
 @keyframes mainGlow {
   0% {
     color: rgb(163, 176, 230);
-    text-shadow: 0 0 1.5em rgba(255, 0, 127, 0.2),
-      0 0 0.125em rgba(255, 0, 153, 0.3), 2em 0.125em 0.5em rgba(0, 153, 255, 0);
+    text-shadow: 6px 0 4px rgba(255, 0, 127, 0.4);
   }
 
   50% {
     color: rgb(255, 255, 255);
-    text-shadow: 0 0 1.5em rgba(255, 0, 127, 0.6),
-      0 0 0.125em rgba(255, 0, 255, 0.6),
-      0.25em 0.125em 0.125em rgba(0, 153, 255, 0.4);
+    text-shadow: 0 6px 4px rgba(255, 0, 127, 0.8);
   }
 
   100% {
     color: rgb(163, 176, 230);
-    text-shadow: 0 0 1.5em rgba(255, 0, 127, 0.2),
-      0 0 0.125em rgba(255, 0, 153, 0.3),
-      -2em 0.125em 0.5em rgba(0, 153, 255, 0);
+    text-shadow: 6px 0 4px rgba(255, 0, 127, 0.4);
   }
 }
 
@@ -375,24 +359,13 @@ iframe {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1100px) {
-}
-
 @media (min-width: 576px) and (max-width: 768px) {
   .card {
     padding: 0.6rem;
   }
-
-  .card-footer {
-    font-size: 1.5rem;
-  }
 }
 
 @media (max-width: 576px) {
-  .card-footer {
-    font-size: 1.5rem;
-  }
-
   .card {
     padding: 0.8rem;
   }
@@ -440,10 +413,6 @@ iframe {
     border: 1px var(--main-second-color) solid;
   }
 
-  #scroll-to-top-btn.active:hover {
-    opacity: 1;
-  }
-
   .hover-item-video:hover {
     transform: scale(1.01);
   }
@@ -487,10 +456,6 @@ iframe {
   button:active {
     color: var(--main-second-color);
     background-color: var(--main-light-color);
-  }
-
-  #scroll-to-top-btn.active:active {
-    opacity: 1;
   }
 
   .hover-item-video:active {
