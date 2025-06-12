@@ -1,5 +1,5 @@
 <div class="navbar-wrapper">
-  <nav class="navbar navbar-expand-sm navbar-custom-style">
+  <nav class="navbar navbar-expand-sm" aria-label="Main navigation">
     <img
       (click)="scrollToSection('music')"
       class="nav-logo hover-item"
@@ -7,42 +7,24 @@
       alt="CRBRVS Logo"
     />
 
+    <app-hamburger-button
+      [isOpen]="isMenuOpen()"
+      (toggleMenu)="onToggleMenu($event)"
+      aria-controls="main-nav"
+    ></app-hamburger-button>
     <div
-      class="navbar-toggler collapsed border-0"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
+      class="navbar-collapse justify-content-end"
+      [class.show]="isMenuOpen()"
+      id="main-nav"
     >
-      <span> </span>
-      <span> </span>
-      <span> </span>
-    </div>
-
-    <div
-      class="collapse navbar-collapse justify-content-end align-center"
-      id="navbarSupportedContent"
-    >
-      <ul class="navbar-nav custom-nav-list">
+      <ul class="navbar-nav">
         <li class="nav-item">
-          <a
-            href="#music"
-            class="nav-link"
-            data-bs-toggle="collapse"
-            data-bs-target=".navbar-collapse.show"
-            (click)="scrollToSection('music')"
+          <a href="#music" class="nav-link" (click)="scrollToSection('music')"
             >Music</a
           >
         </li>
         <li class="nav-item">
-          <a
-            href="#merch"
-            class="nav-link"
-            data-bs-toggle="collapse"
-            data-bs-target=".navbar-collapse.show"
-            (click)="scrollToSection('merch')"
+          <a href="#merch" class="nav-link" (click)="scrollToSection('merch')"
             >Merch</a
           >
         </li>
@@ -50,8 +32,6 @@
           <a
             href="#contact"
             class="nav-link"
-            data-bs-toggle="collapse"
-            data-bs-target=".navbar-collapse.show"
             (click)="scrollToSection('contact')"
             >Contact</a
           >

@@ -1,0 +1,62 @@
+/* Hide the navbar-toggler by default on larger screens */
+.navbar-toggler {
+  display: none;
+}
+
+/* Show the navbar-toggler on screens smaller than 576px */
+@media (max-width: 576px) {
+  .navbar-toggler {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .navbar-toggler > span {
+    display: block !important;
+    position: absolute;
+    background-color: var(--cyan-main-color);
+    height: 4px;
+    width: 60px;
+    left: -10px;
+    transition: all 0.35s ease-out;
+    border-radius: 6px;
+  }
+
+  /* Define the shape and color of the hamburger lines */
+  .navbar-toggler span {
+    display: block;
+    background-color: var(--main-second-color);
+    height: 3px;
+    width: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: all 0.35s ease-out;
+    transform-origin: center left;
+    filter: drop-shadow(2px 2px var(--main-first-color));
+  }
+
+  .navbar-toggler span:nth-child(1) {
+    margin-top: 0.3em;
+  }
+
+  /* Animate to X when open */
+  .navbar-toggler.open > span:nth-child(1) {
+    transform: translate(15%, -33%) rotate(45deg);
+  }
+
+  .navbar-toggler.open > span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggler.open > span:nth-child(3) {
+    transform: translate(15%, 33%) rotate(-45deg);
+  }
+}
