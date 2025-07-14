@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "/dist/crbrvs-website/browser",
+    "public": "dist/crbrvs-website/browser",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
