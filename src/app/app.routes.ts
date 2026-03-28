@@ -10,11 +10,15 @@ export const routes: Routes = [
     title: 'CRBRVS Rap Hive',
   },
   {
-    path: '**',
+    path: '404',
     loadComponent: () =>
       import('./components/page-not-found/page-not-found.component').then(
         (m) => m.PageNotFoundComponent,
       ),
     title: '404',
+  },
+  {
+    path: '**',
+    redirectTo: '404',
   },
 ];
